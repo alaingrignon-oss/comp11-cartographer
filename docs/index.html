@@ -41,6 +41,19 @@
   .bench .stat span { font-size:12.5px; color:var(--muted);}
   footer { margin-top:40px; font-size:12.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:12px;}
   .flash { animation:fl 1.2s ease-out; } @keyframes fl { 0%{background:#fdf3e3;} 100%{background:transparent;} }
+  .controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:8px 0 4px; }
+  .controls label { font-size:13px; color:var(--muted); display:flex; gap:6px; align-items:center;}
+  .controls select, .controls input { padding:5px 8px; border:1px solid var(--line); border-radius:6px; font-size:13.5px; background:#fff; color:var(--ink);}
+  .controls button { padding:5px 12px; border:1px solid var(--line); background:var(--bg); border-radius:6px; cursor:pointer; font-size:13px;}
+  .controls button:hover { background:#eef2f6; }
+  ul.story { font-size:13.5px; color:var(--muted); margin-top:6px;}
+  #upset svg { width:100%; height:auto; display:block;}
+  #upset rect.bar { fill:var(--accent); }
+  #upset rect.colhit { fill:transparent; cursor:pointer;}
+  #upset rect.colhit:hover { fill:#31597e14; }
+  #upset circle.on { fill:var(--accent);} #upset circle.off { fill:#e3e7ee;}
+  #upset line.member { stroke:var(--accent); stroke-width:3; opacity:.85;}
+  #upset text { font-family:inherit; fill:var(--ink);}
 </style>
 </head>
 <body>
@@ -66,6 +79,14 @@
   </div>
 
   <h2>Coverage treemap</h2>
+  <div class="controls">
+    <label>Coordinate
+      <select id="sel-card"><option value="">— whole map —</option></select></label>
+    <label>Work mode
+      <select id="sel-mode"><option value="">All modes</option></select></label>
+    <label>Find <input id="inp-search" type="search" placeholder="landmark or keyword…"></label>
+    <button id="btn-reset" type="button">Reset</button>
+  </div>
   <p class="sub" id="tm-sub">Whole district view. Click a coordinate to open it.</p>
   <div class="crumbs" id="crumbs"></div>
   <div id="treemap"></div>
@@ -73,8 +94,15 @@
 
   <div class="detail" id="detail" style="display:none;"></div>
 
-  <h2>Which coordinates move together</h2>
-  <p class="sub">Curated work modes → exact sets of coordinates they touch. Read a row before starting work of that kind.</p>
+  <h2>Which coordinates move together — UpSet view</h2>
+  <p class="sub">Curated work modes → exact sets of coordinates they touch. Each column is one exact set; the bar counts how many work modes land on it; the linked dots name the members. Click a column for its modes.</p>
+  <div id="upset"></div>
+  <div class="legend" id="upset-note">Click a column to see which work modes share that exact set.</div>
+  <ul class="story">
+    <li><b>All three · OFR-001+002+003:</b> PDP planning, wayfinding, and change-impact review move all three together.</li>
+    <li><b>OFR-001 alone:</b> offer decisions start — and stop — at the offer itself.</li>
+    <li><b>OFR-002+003:</b> claim review always carries the page contract with it.</li>
+  </ul>
   <table class="matrix">
     <tr><th>Work mode</th><th>OFR-001 Product offer</th><th>OFR-002 Claim boundary</th><th>OFR-003 Page contract</th></tr>
     <tr><td>Offer &amp; product decisions</td><td class="yes">●</td><td class="no">—</td><td class="no">—</td></tr>
@@ -141,11 +169,11 @@ function draw() {
   const W=980,H=420;
   let nodes=[];
   if(!selectedCard){
-    nodes = DATA.cards.map(c=>({v:c.volume, label:c.landmark, sub:c.id, count:Object.values(c.counts).reduce((a,b)=>a+b,0)+' facts', color:'#31597e', big:true, act:()=>select(c.id)}));
+    nodes = DATA.cards.map(c=>({v:c.volume, label:c.landmark, sub:c.id, card:c.id, count:Object.values(c.counts).reduce((a,b)=>a+b,0)+' facts', color:'#31597e', big:true, act:()=>select(c.id)}));
   } else {
     const c = DATA.cards.find(x=>x.id===selectedCard);
     for(const k of Object.keys(c.items)){
-      c.items[k].forEach((t,i)=>nodes.push({v:Math.max(t.length,24), label:t, sub:'', color:DATA.categories[k].color, act:()=>jumpCat(k)}));
+      c.items[k].forEach((t,i)=>nodes.push({v:Math.max(t.length,24), label:t, sub:'', card:c.id, color:DATA.categories[k].color, act:()=>jumpCat(k)}));
     }
   }
   const rects = squarify(nodes.map(n=>({v:n.v,ref:n})),0,0,W,H);
@@ -154,7 +182,7 @@ function draw() {
     const n=r.ref, pad=6;
     const fs = n.big ? Math.max(15,Math.min(21,r.w/9)) : Math.max(10,Math.min(13.5,r.h/3.2));
     svg += `<g tabindex="0" role="button" aria-label="${esc(n.label)}">`;
-    svg += `<rect class="tile" x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="5" fill="${n.color}" data-n="${nodes.indexOf(n)}"/>`;
+    svg += `<rect class="tile" x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="5" fill="${n.color}" data-n="${nodes.indexOf(n)}" data-card="${esc(n.card||'')}"/>`;
     if(r.w>64 && r.h>30){
       const maxChars = Math.floor(r.w/(fs*0.56));
       const l1 = n.big ? n.sub : (n.label.length>maxChars? n.label.slice(0,maxChars-1)+'…' : n.label);
@@ -173,7 +201,116 @@ function draw() {
     rt.addEventListener('click',()=>nodes[+rt.dataset.n].act());
   });
   document.getElementById('tm-sub').textContent = tmSub();
-  crumbs(); legend(); detail();
+  crumbs(); legend(); detail(); syncSelect(); applyFilters();
+}
+
+/* ---- controls: dropdowns + search ------------------------------------ */
+const WORK_MODES = {
+  "Offer & product decisions": ["ULT.OFR-001"],
+  "Copy, proof & policy review": ["ULT.OFR-002", "ULT.OFR-003"],
+  "Storefront / PDP planning & QA": ["ULT.OFR-001", "ULT.OFR-002", "ULT.OFR-003"],
+  "Source navigation & wayfinding": ["ULT.OFR-001", "ULT.OFR-002", "ULT.OFR-003"],
+  "Change-impact review": ["ULT.OFR-001", "ULT.OFR-002", "ULT.OFR-003"],
+};
+let activeMode = "", queryText = "";
+
+function syncSelect(){ const s=document.getElementById('sel-card'); if(s) s.value = selectedCard || ""; }
+
+function allowedCards(){
+  let ids = null;
+  if(activeMode) ids = new Set(WORK_MODES[activeMode]);
+  const q = queryText.trim().toLowerCase();
+  if(q){
+    const match = new Set(DATA.cards.filter(c =>
+      (c.landmark+' '+c.sentence+' '+c.id).toLowerCase().includes(q)).map(c=>c.id));
+    ids = ids ? new Set([...ids].filter(i=>match.has(i))) : match;
+  }
+  return ids;
+}
+
+function applyFilters(){
+  const ids = allowedCards();
+  document.querySelectorAll('#treemap rect.tile').forEach(rt=>{
+    rt.style.opacity = (!ids || ids.has(rt.dataset.card)) ? '' : '0.18';
+  });
+  const rows = document.querySelectorAll('table.matrix tr:not(:first-child)');
+  if(!rows.length) return; // membership table lives below UpSet; also filter it
+  rows.forEach(tr=>{
+    const mode = tr.querySelector('td').textContent;
+    const hit = !activeMode || mode === activeMode;
+    tr.style.opacity = hit ? '' : '0.35';
+  });
+}
+
+function renderUpset(){
+  const groups = {};
+  for(const [mode, ids] of Object.entries(WORK_MODES)){
+    const key = ids.join('|');
+    (groups[key] ??= {ids, modes:[]}).modes.push(mode);
+  }
+  const cols = Object.values(groups).sort((a,b)=> b.modes.length - a.modes.length || a.ids.join().localeCompare(b.ids.join()));
+  const W=760, barH=150, dotTop=barH+46, rowGap=34, labelH=30;
+  const H = dotTop + rowGap*DATA.cards.length + labelH + 8;
+  const colW = Math.min(120, (W-40)/cols.length);
+  const x0 = (W - colW*cols.length)/2;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="UpSet exact-set chart">`;
+  // y axis
+  svg += `<text x="${x0-14}" y="${barH+6}" font-size="12" fill="#5b6a78" transform="rotate(-90 ${x0-14} ${barH+6})" text-anchor="end">work modes</text>`;
+  cols.forEach((g,i)=>{
+    const cx = x0 + i*colW + colW/2;
+    const h = g.modes.length*36;
+    svg += `<rect class="bar" x="${cx-26}" y="${barH-h}" width="52" height="${h}" rx="4"><title>${esc(g.modes.join('\n'))}</title></rect>`;
+    svg += `<text x="${cx}" y="${barH-h-7}" font-size="13" text-anchor="middle">${g.modes.length}</text>`;
+    // dot matrix
+    DATA.cards.forEach((c,r)=>{
+      const cy = dotTop + r*rowGap;
+      const on = g.ids.includes(c.id);
+      svg += `<circle class="${on?'on':'off'}" cx="${cx}" cy="${cy}" r="8"/>`;
+    });
+    if(g.ids.length>1){
+      const ys = DATA.cards.filter(c=>g.ids.includes(c.id)).map(c=>dotTop+DATA.cards.indexOf(c)*rowGap);
+      svg += `<line class="member" x1="${cx}" y1="${ys[0]}" x2="${cx}" y2="${ys[ys.length-1]}"/>`;
+    }
+    const short = g.ids.map(id=>'OFR-'+id.split('-')[1]).join('+');
+    svg += `<text x="${cx}" y="${dotTop + rowGap*DATA.cards.length + 20}" font-size="12" text-anchor="middle">${esc(short)}</text>`;
+    svg += `<rect class="colhit" data-col="${i}" x="${cx-colW/2}" y="0" width="${colW}" height="${H}" ><title>${esc(g.modes.join('\n'))}</title></rect>`;
+  });
+  // coordinate row labels
+  DATA.cards.forEach((c,r)=>{
+    svg += `<text x="${x0-24}" y="${dotTop + r*rowGap + 4}" font-size="12.5" text-anchor="end">${esc(c.id)}</text>`;
+  });
+  svg+='</svg>';
+  document.getElementById('upset').innerHTML = svg;
+  document.querySelectorAll('#upset .colhit').forEach(hit=>{
+    hit.addEventListener('click',()=>{
+      const g = cols[+hit.dataset.col];
+      document.getElementById('upset-note').innerHTML =
+        '<b>' + esc(shortSet(g)) + '</b> — ' + g.modes.map(esc).join(' · ');
+    });
+  });
+}
+function shortSet(g){ return g.ids.map(id=>id.split('-').pop()).join('+'); }
+
+function wireControls(){
+  const selCard=document.getElementById('sel-card'),
+        selMode=document.getElementById('sel-mode'),
+        inp=document.getElementById('inp-search');
+  DATA.cards.forEach(c=>{
+    const o=document.createElement('option'); o.value=c.id; o.textContent=`${c.id} — ${c.landmark}`;
+    selCard.appendChild(o);
+  });
+  Object.keys(WORK_MODES).forEach(m=>{
+    const o=document.createElement('option'); o.value=m; o.textContent=m;
+    selMode.appendChild(o);
+  });
+  selCard.addEventListener('change',()=>{ selectedCard = selCard.value || null; draw();
+    if(selectedCard) window.scrollTo({top:document.getElementById('treemap').offsetTop-60, behavior:'smooth'}); });
+  selMode.addEventListener('change',()=>{ activeMode = selMode.value; applyFilters(); });
+  inp.addEventListener('input',()=>{ queryText = inp.value; applyFilters(); });
+  document.getElementById('btn-reset').addEventListener('click',()=>{
+    activeMode=''; queryText=''; selMode.value=''; inp.value='';
+    if(selectedCard){ selectedCard=null; draw(); } else { applyFilters(); }
+  });
 }
 
 function select(id){ selectedCard = id===selectedCard? null : id; draw(); window.scrollTo({top:document.getElementById('treemap').offsetTop-40, behavior:'smooth'}); }
@@ -222,6 +359,8 @@ function detail(){
 
 function jumpCat(k){ const t=document.getElementById('cat-'+k); if(t){t.scrollIntoView({behavior:'smooth',block:'center'}); t.classList.remove('flash'); void t.offsetWidth; t.classList.add('flash');} }
 
+renderUpset();
+wireControls();
 draw();
 </script>
 </body>
