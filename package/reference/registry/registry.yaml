@@ -1,0 +1,113 @@
+# Cartographer registry — machine-readable identity store
+# Rebuild all generated indexes from this file; never hand-edit derived indexes.
+# Grammar: <territory>.<district>-<parcel>; parcels append-only; tombstones never reused.
+schema: cartographer.registry/v1
+territory: ulteemate
+district:
+  code: ULT.OFR
+  landmark: Offer truth and purchase expression
+  state: ratified_persistent_namespace
+  as_of: "2026-08-20"
+
+coordinates:
+  - id: ULT.OFR-001
+    landmark: Product offer
+    aliases:
+      - live offer
+      - launch offer
+      - 2.0 lineup
+      - product catalog
+      - Original/Legacy collision
+      - Ulteemate 2.0 Spike Pack / Spare Spike Pack
+    status: issued_active
+    as_of: "2026-08-20"
+    evidence_grade: A_core_membership
+    provisional_fields:
+      original_legacy_relation: provisional   # one live-offer slot; alias-vs-rename-vs-lineage unresolved
+    known_negatives:
+      older_lineup_spare_offer_coverage: incomplete
+    card: cards/ULT.OFR-001.md
+    locators:
+      - "Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)"
+      - "company-product-description.md#Product Lineup"
+      - "owner-reconciliation/survey-decision-extracts.md#Live offer reconciliation"
+      - "owner-reconciliation/survey-decision-extracts.md#Owner reconciliation — 2026-08-20"
+      - "Website/BRIEF.md#Product Lineup"
+    locator_aliases: []
+
+  - id: ULT.OFR-002
+    landmark: Proof and claim boundary
+    aliases:
+      - claim guardrails
+      - proof policy
+      - substantiation boundary
+      - guarantee boundary
+      - copy rules
+      - testimonial boundary
+      - shipping wording boundary
+    status: issued_active
+    as_of: "2026-08-20"
+    evidence_grade: A_boundary_C_internal_D_deployed
+    provisional_fields:
+      efficacy_substantiation: unverified
+      testimonial_provenance: unverified
+      review_ui_and_external_review_state: presentation_observed_provenance_unverified
+      policy_publication_state: known_missing_at_expected_path
+      refill_qr_test_status: blocked_until_print_scan_test
+      free_shipping_threshold: withheld_nonfinancial_packet
+    card: cards/ULT.OFR-002.md
+    locators:
+      - "reference/product-truth.md#Customer Claim Boundary"
+      - "Website/policies/local-policy-extract.md#Guarantee and returns"
+      - "Website/policies/local-policy-extract.md#Shipping"
+      - "Website/horizon-observations/copy-and-proof.md#Internal proof assertions"
+      - "Website/horizon-observations/storefront-claims.md#Current 2.0 product templates"
+    locator_aliases:
+      - from: "company-product-description.md#Customer-Facing Copy Rules (V2) — added 2026-06-27"
+        to: "reference/product-truth.md#Customer Claim Boundary"
+        event_date: "2026-08-21"
+        kind: file_move_plus_heading_rename
+
+  - id: ULT.OFR-003
+    landmark: Storefront product-page contract
+    aliases:
+      - PDP contract
+      - product-page contract
+      - purchase surface
+      - storefront expression
+      - four-route PDP family
+      - product-template assignment
+    status: issued_active
+    as_of: "2026-08-20"
+    evidence_grade: A_public_observations_B_topology_C_history_D_transactional
+    provisional_fields:
+      cart_and_checkout_completion: unverified
+      live_source_revision: unverified
+      review_and_testimonial_provenance: unverified
+      supporting_policy_publication: known_missing_at_expected_path
+      media_and_accessibility_qa: unverified
+      admin_assignment_history: unverified
+    known_negatives:
+      live_copy_conformance_to_card2: known_nonconforming
+      legacy_old_route: stale_locator_404
+      supporting_policy_route: missing_at_expected_path
+    card: cards/ULT.OFR-003.md
+    locators:
+      - "Website/storefront-readback/current-routes-and-deployment.md#Collection observation"
+      - "Website/storefront-readback/current-routes-and-deployment.md#Product-route observation"
+      - "Website/storefront-readback/current-routes-and-deployment.md#Negative observations"
+      - "Website/storefront-readback/purchase-expression.md#Verified on 2026-08-20"
+      - "Website/BRIEF.md#Product Page — Ulteemate 2.0 Bundle"
+    locator_aliases:
+      - from: "/products/ulteemate-tee-golf-drive-improvement-system"
+        to: "/products/ulteemate-legacy-bundle"
+        event_date: "2026-08-20"
+        kind: stale_route_recorded_no_redirect_inferred
+
+tombstones: []          # retired coordinates; entries are never reassigned to new nouns
+lineage_events: []      # split_from / merged_from / replaced_by entries append here
+ambiguous_review:       # frozen for human decision
+  - subject: Original Ulteemate Bundle vs Ulteemate Legacy Bundle
+    coordinate: ULT.OFR-001
+    field: original_legacy_relation
+    since: "2026-08-20"

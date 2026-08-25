@@ -1,0 +1,1621 @@
+{
+  "schema_version": "1.0",
+  "audit": {
+    "name": "UlteemateAI three-card Ratification-gate preflight",
+    "as_of": "2026-08-20",
+    "launch_date_locked": "2026-07-01",
+    "mode": "document-based, evidence-bounded; not recovery or live SaaS audit",
+    "outcome": "ULT.OFR-001, ULT.OFR-002, and ULT.OFR-003 ratified with explicit provisional fields and issued; semantic slice ratified with explicit provisional and known-negative fields; benchmark unrun",
+    "coordinates_issued": true,
+    "issued_coordinates": [
+      "ULT.OFR-001",
+      "ULT.OFR-002",
+      "ULT.OFR-003"
+    ],
+    "empirical_benchmark_run": false
+  },
+  "inspection_scope": {
+    "foundation_order": [
+      "SPEC.md",
+      "ulteemate-survey-DECISION.md",
+      "coordinate-stress-test-DECISION.md",
+      "BENCHMARK.md",
+      "icm-architect/references/system-map.md"
+    ],
+    "safe_packet_order": [
+      "safe-source-packet/workspace.md",
+      "safe-source-packet/company-product-description.md",
+      "safe-source-packet/audience.md",
+      "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md",
+      "safe-source-packet/Website/BRIEF.md",
+      "safe-source-packet/Website/CONTEXT.md",
+      "safe-source-packet/Website/Artifacts/spare-spike-pack-qr-reorder-instructions.md"
+    ],
+    "other_territory_sources_inspected": [],
+    "prohibited_root": "UlteemateAI",
+    "prohibited_root_accessed": false,
+    "prohibited_root_modified": false,
+    "correction_review": {
+      "safe_packet_sections_inspected": [
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)",
+        "safe-source-packet/company-product-description.md#Product Lineup",
+        "safe-source-packet/Website/BRIEF.md#Product Lineup"
+      ],
+      "changed_locators": [
+        "SPEC.md#§24 Live-offer reconciliation",
+        "ulteemate-survey-DECISION.md#Owner reconciliation — 2026-08-20",
+        "ulteemate-survey-DECISION.md#Live offer reconciliation",
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)",
+        "safe-source-packet/company-product-description.md#Product Lineup",
+        "safe-source-packet/Website/BRIEF.md#Product Lineup"
+      ],
+      "other_safe_packet_sections_inspected": [],
+      "redaction_artifact_corrected": true,
+      "monetary_values_introduced": false,
+      "credential_data_introduced": false,
+      "live_tree_sources_introduced": false
+    },
+    "card2_review": {
+      "safe_packet": "safe-card2-packet/",
+      "worker": "w-cf11-comp11-card2-ratification",
+      "report": "ulteemate-card2-ratification.md",
+      "evidence": "ulteemate-card2-evidence.json",
+      "review": "ulteemate-card2-REVIEW.md",
+      "financially_redacted": true,
+      "credentials_excluded": true,
+      "empirical_benchmark_run": false,
+      "maintainer_live_tree_read_only_source_preparation": true,
+      "worker_live_tree_accessed": false,
+      "live_tree_modified": false
+    },
+    "card3_review": {
+      "safe_packet": "safe-card3-packet/",
+      "initial_worker": "w-b9c7-comp11-card3-ratification",
+      "initial_worker_state": "needs_attention after recursive preparation loop; no output accepted",
+      "completed_worker": "w-67f6-comp11-card3-ratification-redispatch",
+      "report": "ulteemate-card3-ratification.md",
+      "evidence": "ulteemate-card3-evidence.json",
+      "review": "ulteemate-card3-REVIEW.md",
+      "financially_redacted": true,
+      "credentials_excluded": true,
+      "public_readback_prepared_by_maintainer": true,
+      "worker_network_accessed": false,
+      "worker_parent_territory_accessed": false,
+      "empirical_benchmark_run": false
+    }
+  },
+  "evidence_grades": {
+    "A": "current source-citable authority with relevant state and no unresolved packet conflict",
+    "B": "locked current fact with partial local corroboration but no complete current-state artifact",
+    "C": "contract, plan, internal assertion, or conflicting/incomplete evidence",
+    "D": "external or deployed state unavailable in the bounded packet"
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "path": "safe-source-packet/workspace.md",
+      "observed": "2026-08-20; source undated",
+      "role": "canonical structural router",
+      "authority": "routing only",
+      "locators": [
+        "safe-source-packet/workspace.md#Rules",
+        "safe-source-packet/workspace.md#Routing"
+      ]
+    },
+    {
+      "id": "S02",
+      "path": "safe-source-packet/company-product-description.md",
+      "observed": "founder interview April 2026; copy contract added 2026-06-27",
+      "role": "older product lineup, product truth, copy rules, internal proof assertions",
+      "authority": "older launch/ongoing and future-status corroboration plus customer-copy contract; not current complete catalog, independent proof, or external state",
+      "locators": [
+        "safe-source-packet/company-product-description.md#Product Lineup",
+        "safe-source-packet/company-product-description.md#Customer-Facing Copy Rules (V2) — added 2026-06-27",
+        "safe-source-packet/company-product-description.md#Proof Points & Social Proof",
+        "safe-source-packet/company-product-description.md#Name"
+      ]
+    },
+    {
+      "id": "S03",
+      "path": "safe-source-packet/audience.md",
+      "observed": "2026-08-20; source undated",
+      "role": "audience empathy and draft persuasion language",
+      "authority": "audience input; not product-proof authority",
+      "locators": [
+        "safe-source-packet/audience.md#The Primary Avatar",
+        "safe-source-packet/audience.md#Objections to Buying",
+        "safe-source-packet/audience.md#Transformation Statement"
+      ]
+    },
+    {
+      "id": "S04",
+      "path": "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md",
+      "observed": "2026-07-05",
+      "role": "dated post-launch observation of launch theme and four-member available catalog plus forward plan",
+      "authority": "source-citable launch/offer corroboration accepted by SPEC section 24 and Survey Decision; other operational statements remain July 5 history/plan",
+      "locators": [
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)",
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The decision",
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#Committed direction: Email → Proof → Paid, in that order"
+      ]
+    },
+    {
+      "id": "S05",
+      "path": "safe-source-packet/Website/BRIEF.md",
+      "observed": "2026-08-20; source undated",
+      "role": "intended product-page contract and pre-launch checklist",
+      "authority": "contract/plan only; not deployment proof",
+      "locators": [
+        "safe-source-packet/Website/BRIEF.md#Product Lineup",
+        "safe-source-packet/Website/BRIEF.md#Product Page — Ulteemate 2.0 Bundle",
+        "safe-source-packet/Website/BRIEF.md#Assets Needed (Blocking)",
+        "safe-source-packet/Website/BRIEF.md#Tech Checklist"
+      ]
+    },
+    {
+      "id": "S06",
+      "path": "safe-source-packet/Website/CONTEXT.md",
+      "observed": "2026-08-20; source undated",
+      "role": "website contract and theme-code boundary",
+      "authority": "local website routing/boundary only",
+      "locators": [
+        "safe-source-packet/Website/CONTEXT.md#Key reference files",
+        "safe-source-packet/Website/CONTEXT.md#Shopify theme code"
+      ]
+    },
+    {
+      "id": "S07",
+      "path": "safe-source-packet/Website/Artifacts/spare-spike-pack-qr-reorder-instructions.md",
+      "observed": "created 2026-06-10; updated 2026-06-29",
+      "role": "spike-reorder naming and setup instructions",
+      "authority": "local observation/plan; not verified Shopify wiring",
+      "locators": [
+        "safe-source-packet/Website/Artifacts/spare-spike-pack-qr-reorder-instructions.md#Reorder Product",
+        "safe-source-packet/Website/Artifacts/spare-spike-pack-qr-reorder-instructions.md#Launch Setup Steps",
+        "safe-source-packet/Website/Artifacts/spare-spike-pack-qr-reorder-instructions.md#Testing Checklist"
+      ]
+    },
+    {
+      "id": "S08",
+      "path": "safe-card2-packet/",
+      "observed": "2026-08-20",
+      "role": "sanitized current Card 2 authority and conflict extracts",
+      "authority": "supports the issued authority-ordered boundary; detailed source roles remain in ulteemate-card2-evidence.json",
+      "locators": [
+        "safe-card2-packet/source-authority.md#Source authority ledger",
+        "safe-card2-packet/copy-and-proof.md#Current customer-facing copy contract",
+        "safe-card2-packet/policies.md#Authority boundary",
+        "safe-card2-packet/storefront-claims.md#Canonical Horizon storefront claim observations"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "L01",
+      "claim": "workspace.md routes customer-facing work to audience and product truth",
+      "observed": "2026-08-20; source undated",
+      "kind": [
+        "source observation",
+        "contract"
+      ],
+      "authority": "current packet router",
+      "universe": "live",
+      "locators": [
+        "safe-source-packet/workspace.md#Rules",
+        "safe-source-packet/workspace.md#Routing"
+      ],
+      "limit": "routing does not resolve semantic identity; its launch row points to leftover May-plan history"
+    },
+    {
+      "id": "L02",
+      "claim": "Cartographer owns semantic identity, mutable locators, status, and first-order change boundaries without replacing routing or recovery",
+      "observed": "2026-08-20",
+      "kind": [
+        "contract"
+      ],
+      "authority": "locked Comp specification",
+      "universe": "live",
+      "locators": [
+        "SPEC.md#§16 Responsibility boundary",
+        "SPEC.md#§18 Anti-duplication acceptance tests"
+      ],
+      "limit": "method contract, not territory state"
+    },
+    {
+      "id": "L03",
+      "claim": "Ulteemate 2.0 launched 2026-07-01; the re-cut July 5 section observes both the live launch theme and the correct, available four-member catalog",
+      "observed": "2026-08-20 reconciliation; source 2026-07-05",
+      "kind": [
+        "locked/owner-attested fact",
+        "source observation"
+      ],
+      "authority": "SPEC section 24 and Survey Decision reconciliation",
+      "universe": "live",
+      "locators": [
+        "SPEC.md#§24 Live-offer reconciliation",
+        "ulteemate-survey-DECISION.md#Owner reconciliation — 2026-08-20",
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)"
+      ],
+      "limit": "local launch/offer evidence does not prove current Shopify deployment or other external state"
+    },
+    {
+      "id": "L04",
+      "claim": "launch offer has exactly four members: 2.0 Bundle, 2.0 Solo, Legacy Bundle, and 2.0 Spare Spikes / Spike Pack as one refill offer",
+      "observed": "2026-08-20 reconciliation; source 2026-07-05",
+      "kind": [
+        "source observation",
+        "locked reconciliation"
+      ],
+      "authority": "re-cut July 5 catalog as reconciled by SPEC section 24 and Survey Decision",
+      "universe": "live",
+      "locators": [
+        "SPEC.md#§24 Live-offer reconciliation",
+        "ulteemate-survey-DECISION.md#Live offer reconciliation",
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)"
+      ],
+      "grade": "A",
+      "limit": "Spike Pack and Spare Spikes are naming variants for one live member, not separate offers; the older lineup omits the standalone refill row, so older_lineup_spare_offer_coverage remains incomplete"
+    },
+    {
+      "id": "L05",
+      "claim": "Original versus Legacy Bundle is one naming collision, not two live offers and not a fifth offer",
+      "observed": "2026-08-20; older lineup source",
+      "kind": [
+        "source observation",
+        "locked reconciliation"
+      ],
+      "authority": "live catalog uses Legacy; older product description uses Original",
+      "universe": "live",
+      "locators": [
+        "SPEC.md#§24 Live-offer reconciliation",
+        "ulteemate-survey-DECISION.md#Live offer reconciliation",
+        "safe-source-packet/company-product-description.md#Product Lineup"
+      ],
+      "provisional_field": "original_legacy_relation",
+      "limit": "strict alias versus rename/lineage remains provisional; do not double-count"
+    },
+    {
+      "id": "L06",
+      "claim": "Trainer and Boller/Super Bundle are exactly two future-only ghosts and are non-purchasable",
+      "observed": "2026-08-20; older lineup source",
+      "kind": [
+        "locked reconciliation",
+        "source observation"
+      ],
+      "authority": "Survey Decision current classification plus older lineup status corroboration",
+      "universe": "ghost",
+      "locators": [
+        "SPEC.md#§24 Live-offer reconciliation",
+        "ulteemate-survey-DECISION.md#Live offer reconciliation",
+        "safe-source-packet/company-product-description.md#Product Lineup"
+      ],
+      "limit": "older table marks Trainer in development and Boller Bundle future; a name or plan is not purchase wiring"
+    },
+    {
+      "id": "L07",
+      "claim": "spike instructions use live labels but do not verify product, variant, redirect, QR, discount, or checkout deployment",
+      "observed": "updated 2026-06-29",
+      "kind": [
+        "source observation",
+        "plan",
+        "unverified external state"
+      ],
+      "authority": "locked fact for offer identity; none for Shopify wiring",
+      "universe": "external/unverified",
+      "locators": [
+        "safe-source-packet/Website/Artifacts/spare-spike-pack-qr-reorder-instructions.md#Reorder Product",
+        "safe-source-packet/Website/Artifacts/spare-spike-pack-qr-reorder-instructions.md#Launch Setup Steps",
+        "safe-source-packet/Website/Artifacts/spare-spike-pack-qr-reorder-instructions.md#Testing Checklist"
+      ],
+      "limit": "local identifiers/checklists are not deployed-state proof"
+    },
+    {
+      "id": "L08",
+      "claim": "copy contract forbids technical manufacturing and distance/yardage promises; only narrower straighter/more-consistent phrasing is permitted",
+      "observed": "2026-06-27",
+      "kind": [
+        "contract"
+      ],
+      "authority": "product-truth file designated by workspace.md",
+      "universe": "live",
+      "locators": [
+        "safe-source-packet/company-product-description.md#Customer-Facing Copy Rules (V2) — added 2026-06-27",
+        "safe-source-packet/workspace.md#Rules"
+      ],
+      "limit": "wording authority is not independent efficacy validation"
+    },
+    {
+      "id": "L09",
+      "claim": "product-truth file records internal founder, field-test, trainer, and family proof assertions",
+      "observed": "founder interview April 2026",
+      "kind": [
+        "source observation"
+      ],
+      "authority": "internal reference, not independent validation",
+      "universe": "external/unverified",
+      "locators": [
+        "safe-source-packet/company-product-description.md#Proof Points & Social Proof",
+        "safe-source-packet/company-product-description.md#Driving Range Field Test",
+        "safe-source-packet/company-product-description.md#Founder's Own Results"
+      ],
+      "limit": "no raw test record, methodology review, release, or independent substantiation"
+    },
+    {
+      "id": "L10",
+      "claim": "audience copy contains yardage, immediate-result, and guarantee language that conflicts with the narrower copy contract",
+      "observed": "2026-08-20; source undated",
+      "kind": [
+        "source observation"
+      ],
+      "authority": "audience input, not product-proof authority",
+      "universe": "external/unverified",
+      "locators": [
+        "safe-source-packet/audience.md#Objections to Buying",
+        "safe-source-packet/audience.md#What They Actually Need",
+        "safe-source-packet/audience.md#Transformation Statement"
+      ],
+      "limit": "conflicting phrases are not approved claims"
+    },
+    {
+      "id": "L11",
+      "claim": "Website/BRIEF records an intended two-row lineup, page content, and Shopify tasks but is contract/plan evidence rather than deployment proof",
+      "observed": "2026-08-20; source undated",
+      "kind": [
+        "contract",
+        "plan"
+      ],
+      "authority": "intended build brief only",
+      "universe": "leftover",
+      "locators": [
+        "safe-source-packet/Website/BRIEF.md#Product Lineup",
+        "safe-source-packet/Website/BRIEF.md#Product Page — Ulteemate 2.0 Bundle",
+        "safe-source-packet/Website/BRIEF.md#Assets Needed (Blocking)",
+        "safe-source-packet/Website/BRIEF.md#Tech Checklist"
+      ],
+      "limit": "cannot prove Shopify settings, guarantee, shipping, media, reviews, or product status"
+    },
+    {
+      "id": "L12",
+      "claim": "July 5 GTM source is dated observation/plan; its paid state is superseded by the owner-attested August 19 Meta fact",
+      "observed": "source 2026-07-05; superseded 2026-08-19",
+      "kind": [
+        "source observation",
+        "plan",
+        "locked/owner-attested fact"
+      ],
+      "authority": "source for July history; locked fact for later Meta state",
+      "universe": "leftover",
+      "locators": [
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)",
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#Committed direction: Email → Proof → Paid, in that order",
+        "ulteemate-survey-DECISION.md#Paid-channel reconciliation — 2026-08-20"
+      ],
+      "limit": "no email, review, ad, or conversion action inferred; Meta remains external/unverified and outside chain"
+    },
+    {
+      "id": "L13",
+      "claim": "website context treats the brief as a build spec and theme code as a separate explicitly gated implementation surface",
+      "observed": "2026-08-20; source undated",
+      "kind": [
+        "contract"
+      ],
+      "authority": "current packet website context",
+      "universe": "live",
+      "locators": [
+        "safe-source-packet/Website/CONTEXT.md#Key reference files",
+        "safe-source-packet/Website/CONTEXT.md#Shopify theme code"
+      ],
+      "limit": "theme code was not inspected and is not product truth"
+    },
+    {
+      "id": "L14",
+      "claim": "May 1 plan is leftover history, not launch completion proof or current operating truth",
+      "observed": "2026-08-20",
+      "kind": [
+        "locked/owner-attested fact"
+      ],
+      "authority": "locked owner fact",
+      "universe": "leftover",
+      "locators": [
+        "SPEC.md#§21 UlteemateAI Survey Slice 0 status",
+        "ulteemate-survey-DECISION.md#Owner reconciliation — 2026-08-20"
+      ],
+      "limit": "LAUNCH_PLAN.md was outside the packet and not opened"
+    },
+    {
+      "id": "L15",
+      "claim": "current PDP deployment, guarantee terms, and Shopify product/purchase wiring are absent from bounded evidence; the basic launch/offer outcome is no longer absent",
+      "observed": "2026-08-20",
+      "kind": [
+        "evidence-gap finding",
+        "unverified external state"
+      ],
+      "authority": "none in bounded packet",
+      "universe": "external/unverified",
+      "locators": [
+        "safe-source-packet/Website/BRIEF.md#Product Lineup",
+        "safe-source-packet/Website/BRIEF.md#Tech Checklist",
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)"
+      ],
+      "limit": "Website brief is contract/plan evidence only; absence of deployed state is reported without external search or reconstruction"
+    },
+    {
+      "id": "L16",
+      "claim": "prior missing-offer-artifact conclusion was caused by mechanical financial redaction removing whole table rows; the re-cut preserves names, contents, and statuses while excluding monetary and credential data",
+      "observed": "2026-08-20 correction review",
+      "kind": [
+        "packet observation",
+        "audit correction"
+      ],
+      "authority": "bounded re-cut safe packet",
+      "universe": "live evidence",
+      "locators": [
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)",
+        "safe-source-packet/company-product-description.md#Product Lineup",
+        "safe-source-packet/Website/BRIEF.md#Product Lineup"
+      ],
+      "limit": "restores evidence visibility only; does not add or prove external deployment state"
+    },
+    {
+      "id": "L17",
+      "claim": "ULT.OFR-002 is an issued authority-ordered, deny-by-default claim boundary with seven explicit non-blocking provisional fields",
+      "observed": "2026-08-20",
+      "kind": [
+        "Ratification decision",
+        "contract"
+      ],
+      "authority": "accepted Card 2 audit and mechanically cleared review condition",
+      "universe": "live",
+      "locators": [
+        "ulteemate-card2-ratification.md#Issued object card — ULT.OFR-002 Proof and claim boundary",
+        "ulteemate-card2-ratification.md#Explicit provisional fields",
+        "ulteemate-card2-evidence.json#audit",
+        "ulteemate-card2-REVIEW.md"
+      ],
+      "grade": "A for core boundary; C for internal/stale/draft evidence; D for external/deployed fields",
+      "limit": "does not ratify efficacy, testimonials, reviews, policy publication, template assignment, deployment, or ULT.OFR-003"
+    }
+  ],
+  "district": {
+    "code": "ULT.OFR",
+    "display_name": "Offer truth and purchase expression",
+    "status": "ratified persistent namespace; two issued parcels and one candidate parcel",
+    "semantic_question": "Which durable rules govern what can be offered, claimed, and surfaced for purchase?",
+    "contract": "OFR is immutable; display names/cross-routes may evolve; parcels append only; candidate parcels are not issued by district membership alone."
+  },
+  "map_worthiness": [
+    {
+      "noun": "Product offer",
+      "signals": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true
+      },
+      "pass_count": 6,
+      "threshold_met": true,
+      "reason": "distinct offer noun; owns membership/status; independent lineup change; clear boundaries; cross-source collision; safety-critical cold question"
+    },
+    {
+      "noun": "Proof and claim boundary",
+      "signals": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true
+      },
+      "pass_count": 6,
+      "threshold_met": true,
+      "reason": "distinct proof/claim noun; owns copy contract; changes independently; clear boundaries; conflicting cross-source claims; safety-critical cold question"
+    },
+    {
+      "noun": "Storefront product-page contract",
+      "signals": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true
+      },
+      "pass_count": 6,
+      "threshold_met": true,
+      "reason": "distinct PDP target; owns intended sections; expression changes independently; clear boundaries; joins offer/proof/audience/context; declared cold question"
+    }
+  ],
+  "chain": {
+    "order": [
+      "ULT.OFR-001",
+      "ULT.OFR-002",
+      "ULT.OFR-003"
+    ],
+    "coherent_without_overloading": true,
+    "ratification_state": "ULT.OFR-001 and ULT.OFR-002 issued upstream; ULT.OFR-003 candidate/unissued; slice not ratified",
+    "empirical_benchmark_run": false,
+    "boundary": "offer membership -> allowed claim review -> purchase expression; excludes theme implementation, CAD, campaigns, SaaS state, recovery"
+  },
+  "cards": [
+    {
+      "card_heading": "Ratified object card 1 — Product offer",
+      "required_headings": [
+        "One sentence",
+        "Why this shape",
+        "Shape",
+        "Connected to",
+        "Hits / Does not hit",
+        "Surfaces",
+        "See",
+        "as_of",
+        "status",
+        "evidence grade",
+        "useful aliases"
+      ],
+      "coordinate": "ULT.OFR-001",
+      "coordinate_state": "issued; active",
+      "landmark": "Product offer",
+      "one_sentence": "Date-bounded identity of exactly four live offers, one Original/Legacy naming collision, and exactly two future-only names that must never be presented as purchasable.",
+      "as_of": "2026-08-20",
+      "status": "ratified with explicit provisional fields",
+      "evidence_grade": "A",
+      "provisional_fields": {
+        "original_legacy_relation": {
+          "status": "provisional",
+          "known": "Original and Legacy are one naming collision and one live-offer slot",
+          "unknown": "strict alias versus rename versus lineage relation",
+          "blocking": false
+        }
+      },
+      "useful_aliases": [
+        "live offer",
+        "launch offer",
+        "2.0 lineup",
+        "product catalog",
+        "Original/Legacy collision",
+        "Ulteemate 2.0 Spike Pack",
+        "Ulteemate 2.0 Spare Spike Pack"
+      ],
+      "why_this_shape": "Prevents omitted Spare Spikes, ghost promotion, and Original/Legacy double-counting without mapping Shopify configuration.",
+      "shape": {
+        "live_offers": [
+          "Ulteemate 2.0 Bundle",
+          "Ulteemate 2.0 Solo",
+          "Ulteemate Legacy Bundle",
+          "Ulteemate 2.0 Spare Spikes / Spike Pack"
+        ],
+        "naming_collision": {
+          "count": 1,
+          "names": [
+            "Original Ulteemate Bundle",
+            "Ulteemate Legacy Bundle"
+          ],
+          "live_offer_slots": 1,
+          "relation": "provisional"
+        },
+        "spare_offer_aliases": [
+          "Ulteemate 2.0 Spike Pack",
+          "Ulteemate 2.0 Spare Spike Pack"
+        ],
+        "older_lineup_spare_offer_coverage": "incomplete; older lineup omits the standalone refill row",
+        "ghosts": [
+          "Ulteemate Trainer",
+          "Ulteemate Boller/Super Bundle"
+        ],
+        "external_unverified": [
+          "Shopify status",
+          "handles/variants",
+          "prices/inventory",
+          "collections/navigation",
+          "redirect/QR/discount/checkout"
+        ]
+      },
+      "connected_to": [
+        "ULT.OFR-002",
+        "ULT.OFR-003"
+      ],
+      "hits_does_not_hit": {
+        "hits": [
+          "claim/packaging review",
+          "product-page title/contents/recommendations/purchase expression",
+          "spike-reorder naming if identity changes"
+        ],
+        "does_not_hit": [
+          "theme implementation",
+          "CAD/product design",
+          "Meta/Klaviyo execution",
+          "financials",
+          "credentials",
+          "recovery state"
+        ]
+      },
+      "surfaces": [
+        "human offer decisions",
+        "copy planning",
+        "PDP briefing",
+        "semantic navigation"
+      ],
+      "see": [
+        "SPEC.md#§24 Live-offer reconciliation",
+        "ulteemate-survey-DECISION.md#Live offer reconciliation",
+        "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)",
+        "safe-source-packet/company-product-description.md#Product Lineup",
+        "safe-source-packet/Website/BRIEF.md#Product Lineup"
+      ],
+      "claim_ids": [
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L14",
+        "L15",
+        "L16"
+      ],
+      "recommendation": "ratify with explicit provisional fields",
+      "blockers": [],
+      "non_blocking_uncertainties": [
+        "original_legacy_relation"
+      ]
+    },
+    {
+      "card_heading": "Issued object card 2 — Proof and claim boundary",
+      "required_headings": [
+        "One sentence",
+        "Why this shape",
+        "Shape",
+        "Connected to",
+        "Hits / Does not hit",
+        "Surfaces",
+        "See",
+        "as_of",
+        "status",
+        "evidence grade",
+        "useful aliases"
+      ],
+      "coordinate": "ULT.OFR-002",
+      "coordinate_state": "issued; active",
+      "landmark": "Proof and claim boundary",
+      "one_sentence": "Proof and claim boundary is the durable rule that permits only current narrow wording and policy language, confines internal results to attributed evidence, defers offer contents to Card 1, and blocks unsubstantiated, unauthenticated, or undeployed claims.",
+      "as_of": "2026-08-20",
+      "status": "ratified with explicit provisional fields",
+      "evidence_grade": {
+        "core_boundary": "A",
+        "internal_stale_or_draft_evidence": "C",
+        "external_or_deployed_state": "D"
+      },
+      "useful_aliases": [
+        "claim guardrails",
+        "proof policy",
+        "substantiation boundary",
+        "guarantee boundary",
+        "copy rules",
+        "testimonial boundary",
+        "shipping wording boundary"
+      ],
+      "why_this_shape": "An authority-ordered boundary lets a cold reader decide what may be said without treating source presence as substantiation or deployment.",
+      "shape": [
+        {
+          "order": 1,
+          "rule": "ULT.OFR-001 owns offer membership and contents.",
+          "claim_ids": [
+            "C2-CLM-017",
+            "C2-CLM-018"
+          ]
+        },
+        {
+          "order": 2,
+          "rule": "The dated product-truth contract owns allowed and prohibited product wording.",
+          "claim_ids": [
+            "C2-CLM-002",
+            "C2-CLM-003",
+            "C2-CLM-004",
+            "C2-CLM-005"
+          ]
+        },
+        {
+          "order": 3,
+          "rule": "Final refund and shipping artifacts own current local non-financial policy wording.",
+          "claim_ids": [
+            "C2-CLM-010",
+            "C2-CLM-011",
+            "C2-CLM-012",
+            "C2-CLM-019"
+          ]
+        },
+        {
+          "order": 4,
+          "rule": "Founder, field-test, instructor, and family assertions are attributed-only internal evidence.",
+          "claim_ids": [
+            "C2-CLM-006",
+            "C2-CLM-007",
+            "C2-CLM-008",
+            "C2-CLM-009"
+          ]
+        },
+        {
+          "order": 5,
+          "rule": "Theme, Q&A, conflicted final, draft, and older specification artifacts reveal conflicts but do not override higher authority.",
+          "claim_ids": [
+            "C2-CLM-013",
+            "C2-CLM-014",
+            "C2-CLM-018",
+            "C2-CLM-020",
+            "C2-CLM-021",
+            "C2-CLM-022"
+          ]
+        },
+        {
+          "order": 6,
+          "rule": "Publication, deployment, assignment, reviews, and quote provenance remain unverified.",
+          "claim_ids": [
+            "C2-CLM-013",
+            "C2-CLM-015",
+            "C2-CLM-016",
+            "C2-CLM-019"
+          ]
+        }
+      ],
+      "connected_to": [
+        {
+          "target": "ULT.OFR-001",
+          "relation": "consumes current offer names and contents",
+          "locators": [
+            "safe-card2-packet/source-authority.md#Existing Cartographer authority"
+          ]
+        },
+        {
+          "target": "ULT.OFR-003",
+          "relation": "supplies allowed, prohibited, attributed-only, policy, and unverified-state rules",
+          "locators": [
+            "safe-card2-packet/copy-and-proof.md#Current customer-facing copy contract",
+            "safe-card2-packet/policies.md#Authority boundary"
+          ]
+        },
+        {
+          "target": "workspace.md",
+          "relation": "uses structural routing only",
+          "locators": [
+            "safe-card2-packet/source-authority.md#workspace.md"
+          ]
+        }
+      ],
+      "upstream_dependency_state": "ULT.OFR-001 issued; Card 2 independently ratified and issued",
+      "hits_does_not_hit": {
+        "hits": [
+          "product-page promises and benefits",
+          "proof blocks",
+          "Q&A and FAQ",
+          "guarantee/returns and shipping wording",
+          "testimonials and review presentation",
+          "objection-busters",
+          "packaging and feature copy",
+          "customer-facing offer descriptions that repeat a changed claim"
+        ],
+        "does_not_hit": [
+          "offer membership or contents as facts",
+          "financial values or the maintainer-local free-shipping threshold",
+          "theme layout/code mechanics",
+          "live deployment or SaaS configuration",
+          "CAD or physical product design",
+          "campaign execution",
+          "credentials",
+          "independent validation itself"
+        ]
+      },
+      "surfaces": [
+        "human and agent copy review",
+        "PDP contract drafting",
+        "policy placement review",
+        "packaging and customer-facing proof review"
+      ],
+      "see": [
+        "safe-card2-packet/source-authority.md#Source authority ledger",
+        "safe-card2-packet/copy-and-proof.md#Current customer-facing copy contract",
+        "safe-card2-packet/copy-and-proof.md#Internal proof assertions",
+        "safe-card2-packet/policies.md#Guarantee and returns",
+        "safe-card2-packet/policies.md#Shipping",
+        "safe-card2-packet/storefront-claims.md#Canonical Horizon storefront claim observations",
+        "safe-card2-packet/known-conflicts.md#Known conflicts and decision points",
+        "safe-card2-packet/source-authority.md#Existing Cartographer authority"
+      ],
+      "claim_ids": [
+        "L08",
+        "L09",
+        "L10",
+        "L11",
+        "L15",
+        "L17"
+      ],
+      "detailed_claim_ids": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "recommendation": "ratify with explicit provisional fields",
+      "blockers": [],
+      "non_blocking_uncertainties": [
+        "independent_efficacy_substantiation",
+        "named_testimonial_provenance",
+        "review_ui_and_external_review_state",
+        "policy_publication_state",
+        "theme_deployment_and_template_assignment",
+        "planned_refill_qr_print_scan_status",
+        "free_shipping_threshold"
+      ]
+    },
+    {
+      "card_heading": "Issued object card 3 — Storefront product-page contract",
+      "required_headings": [
+        "One sentence",
+        "Why this shape",
+        "Shape",
+        "Connected to",
+        "Hits / Does not hit",
+        "Surfaces",
+        "See",
+        "as_of",
+        "status",
+        "evidence grade",
+        "useful aliases"
+      ],
+      "coordinate": "ULT.OFR-003",
+      "coordinate_state": "issued; active",
+      "landmark": "Storefront product-page contract",
+      "one_sentence": "Purchase-facing expression rule under which each Card 1 live offer has a canonical page that consumes Card 2's closed claim gate, exposes product selection and cart-add affordances, and stops before inferring transaction, provenance, publication, accessibility, admin, or source-revision facts.",
+      "as_of": "2026-08-20",
+      "status": "ratified with explicit provisional fields",
+      "evidence_grade": "A for public route/template/form observations; B for corroborated topology; C for known nonconforming copy; D for unavailable external fields",
+      "useful_aliases": [
+        "PDP contract",
+        "product-page contract",
+        "purchase surface",
+        "storefront expression",
+        "four-route PDP family",
+        "product-template assignment"
+      ],
+      "why_this_shape": "One coordinate captures shared ownership and safe stop rules for four product-specific variants without duplicating Card 1 identities or treating theme presence as claim authority.",
+      "shape": {
+        "intended_sections": [
+          "product information/CTA",
+          "contents",
+          "shipping/returns",
+          "FAQ",
+          "media/testimonials",
+          "recommendations",
+          "objection busters"
+        ],
+        "required_inputs": [
+          "ULT.OFR-001 current offer",
+          "ULT.OFR-002 cleared claims",
+          "audience empathy"
+        ],
+        "public_observation": "Four Card 1 routes return successfully with canonical declarations, expected dedicated suffixes, a shared live theme marker, product-data markup, and cart-add forms.",
+        "known_negative_states": [
+          "live_copy_conformance_to_card2: known_nonconforming",
+          "legacy_old_route: stale_locator_404",
+          "supporting_policy_route: missing_at_expected_path"
+        ],
+        "excluded": [
+          "cart or checkout completion",
+          "review or testimonial provenance",
+          "alternate policy publication",
+          "media or accessibility quality",
+          "Shopify admin history",
+          "exact local-to-live source revision",
+          "CAD/product design"
+        ]
+      },
+      "connected_to": [
+        "ULT.OFR-001",
+        "ULT.OFR-002",
+        "safe-source-packet/audience.md#The Primary Avatar"
+      ],
+      "upstream_dependency_state": "ULT.OFR-001 and ULT.OFR-002 ratified and issued; Card 3 consumes both without broadening either",
+      "hits_does_not_hit": {
+        "hits": [
+          "title",
+          "promise/benefits/features",
+          "contents",
+          "guarantee/returns",
+          "FAQ",
+          "media/testimonials",
+          "recommendations",
+          "CTA expression",
+          "canonical route and stale locator status",
+          "product-specific template assignment",
+          "page-level publication observation"
+        ],
+        "does_not_hit": [
+          "offer membership or contents as source truth",
+          "efficacy or testimonial provenance",
+          "cart or checkout completion",
+          "inventory, fulfillment, customer, or account state",
+          "unrelated theme-code mechanics",
+          "CAD/product design",
+          "campaign execution",
+          "recovery artifacts"
+        ]
+      },
+      "surfaces": [
+        "PDP planning and review",
+        "storefront content QA",
+        "product-template assignment readback",
+        "public route checks",
+        "Card 2 claim-compliance review"
+      ],
+      "see": [
+        "safe-card3-packet/source-authority.md#Ordered authority",
+        "safe-card3-packet/pdp-contract.md#Required shape",
+        "safe-card3-packet/current-routes-and-deployment.md#Product-route observation",
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations",
+        "safe-card3-packet/purchase-expression.md#Safe rule",
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults",
+        "ulteemate-card3-ratification.md#Issued object card — ULT.OFR-003 Storefront product-page contract"
+      ],
+      "claim_ids": [
+        "C3-CLM-001",
+        "C3-CLM-003",
+        "C3-CLM-005",
+        "C3-CLM-007",
+        "C3-CLM-010",
+        "C3-CLM-012",
+        "C3-CLM-017"
+      ],
+      "recommendation": "ratify with explicit provisional fields",
+      "blockers": [],
+      "known_negative_states": [
+        "live_copy_conformance_to_card2",
+        "legacy_old_route",
+        "supporting_policy_route"
+      ],
+      "non_blocking_uncertainties": [
+        "cart_and_checkout_completion",
+        "live_source_revision",
+        "review_and_testimonial_provenance",
+        "supporting_policy_publication",
+        "media_and_accessibility_qa"
+      ]
+    }
+  ],
+  "artifact_questions": [
+    {
+      "artifact": "ulteemate-three-card-ratification.md",
+      "question": "Has this exact three-noun slice cleared evidence and identity Ratification?"
+    },
+    {
+      "artifact": "ulteemate-three-card-evidence.json",
+      "question": "Which claims, locators, aliases, gaps, drift outcomes, and verdicts support each issued or candidate identity?"
+    },
+    {
+      "artifact": "ULT.OFR district entry",
+      "question": "Which semantic zone contains offer, claim, and purchase-expression truth?"
+    },
+    {
+      "artifact": "ULT.OFR-001 card",
+      "question": "What is live, ghost, or colliding, and what changes first if offer identity changes?"
+    },
+    {
+      "artifact": "ULT.OFR-002 card",
+      "question": "Which assertions are permitted, conflicted, or unverified, and what must be reviewed when proof changes?"
+    },
+    {
+      "artifact": "ULT.OFR-003 card",
+      "question": "How must current offer and allowed claims be expressed without treating implementation as truth?"
+    }
+  ],
+  "benchmark_preflight": [
+    {
+      "id": 1,
+      "safety_critical": true,
+      "card": "ULT.OFR-001",
+      "answer": "Exactly four live members: 2.0 Bundle, 2.0 Solo, Legacy Bundle, and 2.0 Spare Spikes / Spike Pack as one refill offer. Exactly two ghosts: Trainer and Boller/Super. Re-cut July 5 source closes the basic offer gap.",
+      "empirical_result": null
+    },
+    {
+      "id": 2,
+      "safety_critical": false,
+      "card": "ULT.OFR-001",
+      "answer": "Original/Legacy is one naming collision, not two live offers or a fifth offer; original_legacy_relation remains provisional; naming hits claims/PDP, not CAD/theme/external records.",
+      "empirical_result": null
+    },
+    {
+      "id": 3,
+      "safety_critical": true,
+      "card": "ULT.OFR-002",
+      "answer": "Issued Card 2 permits only narrow qualitative outcome wording and current local non-financial policy wording; prohibits distance/yardage, longer-drive, slice-stopping, immediate/first-use certainty, performance-contingent guarantee language, stale bundle quantities, and unauthenticated testimonial/review claims; internal proof is attributed-only.",
+      "empirical_result": null
+    },
+    {
+      "id": 4,
+      "safety_critical": false,
+      "card": "ULT.OFR-002",
+      "answer": "Issued Card 2 hits promises/benefits, proof blocks, guarantee/returns and shipping wording, Q&A/FAQ, testimonials/reviews, objection busters, packaging/features, and repeated offer-description claims; it does not own offer facts, monetary values, theme mechanics, deployment, CAD, campaigns, credentials, or independent validation.",
+      "empirical_result": null
+    },
+    {
+      "id": 5,
+      "safety_critical": false,
+      "card": "ULT.OFR-003",
+      "answer": "PDP contract consumes offer and cleared claims; brief is intended content, not deployed proof; theme/CAD excluded.",
+      "empirical_result": null
+    },
+    {
+      "id": 6,
+      "safety_critical": true,
+      "card": "ULT.OFR-001",
+      "answer": "Future products require new current source evidence plus human Steward/Ratification offer, claim, and PDP review before the ratified ghost status changes.",
+      "empirical_result": null
+    },
+    {
+      "id": 7,
+      "safety_critical": false,
+      "card": "ULT.OFR-001",
+      "answer": "May plan did not happen as written and is leftover. July launch and the four-member offer are corroborated by the re-cut July 5 source and reconciled by SPEC section 24 and Survey Decision.",
+      "empirical_result": null
+    },
+    {
+      "id": 8,
+      "safety_critical": false,
+      "card": "ULT.OFR-002",
+      "answer": "Move/rename preserves coordinate, updates verified locator, and retains old locator alias.",
+      "empirical_result": null
+    },
+    {
+      "id": 9,
+      "safety_critical": true,
+      "card": "task-specific registry record",
+      "answer": "No silent resolution: broken becomes uncertain; ambiguous split/merge freezes; new coordinates/lineage follow human decision only.",
+      "empirical_result": null
+    },
+    {
+      "id": 10,
+      "safety_critical": false,
+      "card": "routing design",
+      "answer": "Design routes each task to at most one card plus source; reader performance remains untested.",
+      "empirical_result": null
+    }
+  ],
+  "pilot_packets": {
+    "status": "required later; not run",
+    "common_snapshot": {
+      "id": "ulteemate-ratification-2026-08-20",
+      "contents": [
+        "the seven safe_packet_order files, byte-identical",
+        "cited sections of ulteemate-survey-DECISION.md for locked facts",
+        "cited sections of coordinate-stress-test-DECISION.md for lifecycle rules"
+      ],
+      "scorer_only": "BENCHMARK.md prompts, thresholds, expected-answer key"
+    },
+    "baseline": [
+      "identical task prompt",
+      "safe-source-packet/workspace.md",
+      "task-specific plain path#heading sheet with no semantic/status/boundary hints",
+      "same on-demand common sources",
+      "Q8/Q9 ordinary stale/ambiguous pointer fixture without registry resolver"
+    ],
+    "cartographer": [
+      "identical task prompt",
+      "byte-identical safe-source-packet/workspace.md",
+      "three-row ULT.OFR catalog: coordinate, landmark, issued/candidate status, selected-card route only",
+      "exactly one selected card, whether issued Card 1 or candidate Card 2/3; no sibling card or whole registry",
+      "that card's locators; Q8/Q9 one task-specific resolution record only",
+      "same on-demand common sources"
+    ],
+    "measurements": [
+      "accuracy",
+      "safety-critical accuracy",
+      "first correct source",
+      "files/context loaded",
+      "wrong turns",
+      "elapsed time",
+      "Hits/Does not hit",
+      "drift result",
+      "identity safety"
+    ]
+  },
+  "drift_exercises": [
+    {
+      "id": 1,
+      "case": "one file move plus heading rename",
+      "coordinate": "ULT.OFR-002",
+      "before": {
+        "coordinate": "ULT.OFR-002",
+        "current_locator": "safe-source-packet/company-product-description.md#Customer-Facing Copy Rules (V2) — added 2026-06-27",
+        "locator_aliases": []
+      },
+      "event": {
+        "type": "verified_move_and_heading_rename",
+        "new_locator": "safe-source-packet/reference/product-truth.md#Customer Claim Boundary"
+      },
+      "after": {
+        "coordinate": "ULT.OFR-002",
+        "current_locator": "safe-source-packet/reference/product-truth.md#Customer Claim Boundary",
+        "locator_aliases": [
+          "safe-source-packet/company-product-description.md#Customer-Facing Copy Rules (V2) — added 2026-06-27"
+        ]
+      },
+      "result": "coordinate unchanged; verified current_locator updated; old locator appended to locator_aliases",
+      "registry_status": "issued/active",
+      "actual_filesystem_mutation": false
+    },
+    {
+      "id": 2,
+      "case": "future-product ghost tripwire",
+      "coordinate": "ULT.OFR-001",
+      "before": {
+        "coordinate": "ULT.OFR-001",
+        "live_offer_count": 4,
+        "ghosts": [
+          "Ulteemate Trainer",
+          "Ulteemate Boller/Super Bundle"
+        ]
+      },
+      "event": "draft names Trainer or Boller/Super without new current evidence",
+      "after": {
+        "coordinate": "ULT.OFR-001",
+        "live_offer_count": 4,
+        "ghosts": [
+          "Ulteemate Trainer",
+          "Ulteemate Boller/Super Bundle"
+        ],
+        "new_product_coordinate": null
+      },
+      "result": "issued active offer coordinate unchanged; ghosts remain non-purchasable; no product coordinate minted",
+      "registry_status": "ghost_blocked; review_required",
+      "promotion_requirement": "new source-citable evidence plus human Steward/Ratification offer/claim/PDP review",
+      "actual_filesystem_mutation": false
+    },
+    {
+      "id": 3,
+      "case": "broken locator",
+      "coordinate": "ULT.OFR-003",
+      "before": {
+        "coordinate": "ULT.OFR-003",
+        "current_locator": "safe-source-packet/Website/BRIEF.md#Product Page — Ulteemate 2.0 Bundle",
+        "locator_status": "resolvable"
+      },
+      "event": "current locator no longer resolves",
+      "after": {
+        "coordinate": "ULT.OFR-003",
+        "current_locator": "safe-source-packet/Website/BRIEF.md#Product Page — Ulteemate 2.0 Bundle",
+        "locator_status": "broken",
+        "identity_status": "uncertain",
+        "replacement_locator": null
+      },
+      "result": "coordinate unchanged; locator broken; identity/evidence uncertain; no fuzzy remap",
+      "registry_status": "broken/uncertain",
+      "handoff": "workspace owner/Steward; structural recovery only if separately desired",
+      "actual_filesystem_mutation": false
+    },
+    {
+      "id": 4,
+      "case": "ambiguous split/merge",
+      "coordinates": [
+        "ULT.OFR-001",
+        "ULT.OFR-002",
+        "ULT.OFR-003"
+      ],
+      "before": {
+        "coordinates": [
+          "ULT.OFR-001",
+          "ULT.OFR-002",
+          "ULT.OFR-003"
+        ],
+        "coordinate_state": {
+          "ULT.OFR-001": "issued; active",
+          "ULT.OFR-002": "issued; active",
+          "ULT.OFR-003": "candidate; not issued"
+        }
+      },
+      "event": "offer may split into catalog/individual identities or proof may merge into PDP contract",
+      "after_pending_decision": {
+        "coordinates": [
+          "ULT.OFR-001",
+          "ULT.OFR-002",
+          "ULT.OFR-003"
+        ],
+        "registry_status": "ambiguous_review",
+        "replacement_coordinates": []
+      },
+      "result_before_decision": "freeze identities; preserve coordinates/locators; issue no replacement; rewrite no reference",
+      "registry_status": "ambiguous_review",
+      "result_after_human_decision_only": "allocate next append-only parcel(s); add split_from/merged_from/replaced_by/alias/tombstone lineage; keep old coordinates resolvable",
+      "new_coordinates_preassigned": false,
+      "actual_filesystem_mutation": false
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G03",
+      "gap": "independent efficacy substantiation",
+      "blocks": [],
+      "classification": "non-blocking Card 2 provisional field; narrow wording and attributed-only safe defaults apply"
+    },
+    {
+      "id": "G04",
+      "gap": "testimonial provenance, external review state, policy publication, deployment/assignment, refill-QR test status, and maintainer-local shipping threshold",
+      "blocks": [
+        "ULT.OFR-003"
+      ],
+      "classification": "non-blocking for issued Card 2; relevant deployment fields remain part of Card 3 evidence"
+    },
+    {
+      "id": "G05",
+      "gap": "current PDP snapshot/source with actual copy and offer wiring",
+      "blocks": [
+        "ULT.OFR-003",
+        "slice"
+      ]
+    },
+    {
+      "id": "G07",
+      "gap": "Shopify product/variant/price/inventory/redirect/QR/discount/checkout state",
+      "classification": "external/unverified; not sought"
+    },
+    {
+      "id": "G08",
+      "gap": "Original/Legacy strict alias versus rename versus lineage relation",
+      "classification": "non-blocking for ULT.OFR-001; original_legacy_relation remains provisional"
+    },
+    {
+      "id": "G09",
+      "gap": "independent cold-reader benchmark",
+      "classification": "not run; no empirical threshold or advantage claimed"
+    }
+  ],
+  "owner_decisions": [
+    {
+      "id": "D02",
+      "decision": "set Original/Legacy canonical identity, alias, or lineage; non-blocking while original_legacy_relation remains provisional"
+    },
+    {
+      "id": "D03",
+      "decision": "future Steward approval is required only to broaden a deny-by-default Card 2 field",
+      "status": "current conservative boundary resolved and issued"
+    },
+    {
+      "id": "D04",
+      "decision": "current product-page contract is issued from the bounded public/local Card 3 evidence",
+      "status": "resolved for semantic issuance; compliance, transaction, provenance, publication, accessibility, admin history, and exact revision remain bounded fields"
+    }
+  ],
+  "not_required_for_chain": [
+    "new four-offer artifact; re-cut July 5 source closes the basic offer gap",
+    "decision on owner-attested 2026-08-19 Meta campaign; external/unverified and outside first-order slice"
+  ],
+  "verdicts": {
+    "ULT.OFR-001": {
+      "recommendation": "ratify with explicit provisional fields",
+      "coordinate_state": "issued; active",
+      "provisional_fields": [
+        "original_legacy_relation"
+      ]
+    },
+    "ULT.OFR-002": {
+      "recommendation": "ratify with explicit provisional fields",
+      "coordinate_state": "issued; active",
+      "provisional_fields": [
+        "independent_efficacy_substantiation",
+        "named_testimonial_provenance",
+        "review_ui_and_external_review_state",
+        "policy_publication_state",
+        "theme_deployment_and_template_assignment",
+        "planned_refill_qr_print_scan_status",
+        "free_shipping_threshold"
+      ]
+    },
+    "ULT.OFR-003": {
+      "recommendation": "ratify with explicit provisional fields",
+      "coordinate_state": "issued; active",
+      "known_negative_fields": [
+        "live_copy_conformance_to_card2",
+        "legacy_old_route",
+        "supporting_policy_route"
+      ],
+      "provisional_fields": [
+        "cart_and_checkout_completion",
+        "live_source_revision",
+        "review_and_testimonial_provenance",
+        "supporting_policy_publication",
+        "media_and_accessibility_qa"
+      ]
+    },
+    "slice": {
+      "recommendation": "ratify with explicit provisional and known-negative fields",
+      "reason": "All three semantic coordinates are issued; storefront compliance and empirical benchmark performance remain outside the issuance claim"
+    }
+  },
+  "review": {
+    "original_audit": {
+      "worker": {
+        "id": "w-608e-ulteemate-three-card-ratification",
+        "final_status": "done"
+      },
+      "advisor_review": {
+        "overall_exit": 0,
+        "qwen": "failed: no Metal device available in the sandbox",
+        "ornith": "failed: 99145 prompt tokens exceeded 8192-token context",
+        "codex_final": "accepted artifacts and do-not-ratify verdict; explicitly not an independent review",
+        "interpretation": "historical review later superseded for Card 1 by the formal redaction finding and re-cut packet"
+      }
+    },
+    "safe_packet_recut_correction": {
+      "executor_worker": "w-6c91-comp11-card1-redaction-correction",
+      "decision": "ULT.OFR-001 ratify with explicit provisional fields and issue; downstream cards and slice remain do not ratify",
+      "post_preparation_locator_correction_applied": true,
+      "company_product_description_product_lineup_resolves": true,
+      "independent_cold_reader_pilot_run": false,
+      "different_model_independent_review": false
+    },
+    "card2_ratification": {
+      "executor_worker": "w-cf11-comp11-card2-ratification",
+      "decision": "ULT.OFR-002 ratify with explicit provisional fields and issue; ULT.OFR-003 and slice remain do not ratify",
+      "ari_os_review": "conditionally accepted subject only to JSON completeness",
+      "json_parse_valid": true,
+      "required_counts_valid": true,
+      "review_condition_cleared": true,
+      "independent_cold_reader_pilot_run": false
+    },
+    "card3_ratification": {
+      "initial_worker": "w-b9c7-comp11-card3-ratification",
+      "initial_worker_result": "needs_attention after recursive preparation loop; no output accepted",
+      "executor_worker": "w-67f6-comp11-card3-ratification-redispatch",
+      "decision": "ULT.OFR-003 ratify with explicit provisional fields and issue; semantic slice ratified with known-negative fields",
+      "ari_os_review": "accepted; two non-blocking Card 2 back-routing notes incorporated",
+      "qwen_compressor": "succeeded",
+      "ornith_reviewer": "failed: 10008 prompt tokens exceeded 8192-token context",
+      "codex_final_reviewer": "accepted after checking both files, structure, anchors, factual fidelity, and safe-stop discipline",
+      "json_parse_valid": true,
+      "required_counts_valid": true,
+      "independent_cold_reader_pilot_run": false
+    }
+  },
+  "checks": [
+    {
+      "command": "python3 -m json.tool ulteemate-three-card-evidence.json >/dev/null",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "result": "JSON valid"
+    },
+    {
+      "command": "inline Python required-content verifier over only the two output files",
+      "exit": 0,
+      "stdout": "REQUIRED_CONTENT_OK: cards=3 benchmark=10 drift=4 paths=7 files=2",
+      "result": "required content present in both files"
+    },
+    {
+      "command": "inline Python prohibited-claim and structured-state verifier over only the two output files",
+      "exit": 0,
+      "stdout": "PROHIBITED_CLAIMS_OK: live=4 ghosts=2 may=leftover external=unverified",
+      "result": "no prohibited affirmative claim and structured universes correct"
+    },
+    {
+      "command": "git status --short -- ulteemate-three-card-ratification.md ulteemate-three-card-evidence.json",
+      "exit": 0,
+      "stdout_lines": [
+        "?? ulteemate-three-card-evidence.json",
+        "?? ulteemate-three-card-ratification.md"
+      ],
+      "result": "only the two scoped paths shown by scoped status"
+    },
+    {
+      "command": "wc -l -c ulteemate-three-card-ratification.md ulteemate-three-card-evidence.json",
+      "exit": 0,
+      "result": "informational pre-line-addition count: markdown=431 lines/41929 bytes; json=601 lines/35609 bytes; total=1032 lines/77538 bytes"
+    },
+    {
+      "command": "final-review structural verifier",
+      "exit": 0,
+      "stdout_lines": [
+        "FINAL_STRUCTURE_OK: cards=3 sections=6x3 benchmarks=10 drift=4 paths_in_both=7 claims=15 verdicts=4",
+        "JSON_TOOL_OK: exit=0 stdout=empty stderr=empty"
+      ],
+      "result": "required structure and JSON validity confirmed"
+    },
+    {
+      "command": "final-review prohibited-state validator attempts 1-3",
+      "exit": 1,
+      "stderr": "AssertionError",
+      "result": "reviewer predicates were too literal; attempt 3 isolated md_saas=false because it expected 'not evidence of deployed-state proof' instead of 'as deployed-state proof'; artifacts unchanged"
+    },
+    {
+      "command": "corrected final-review prohibited-state validator",
+      "exit": 0,
+      "stdout": "PROHIBITED_STATE_OK: live_offer=4 ghosts=future_only original_legacy=collision may_plan=leftover local_saas=unverified",
+      "result": "structured and narrative prohibited-state assertions confirmed"
+    },
+    {
+      "command": "final-review exact-locator resolver",
+      "exit": 0,
+      "stdout": "LOCATOR_RESOLUTION_OK: locators=35 unique=27 files=9",
+      "result": "every claim locator resolved to an exact heading in the authorized foundation/packet set"
+    },
+    {
+      "command": "final-review scoped status",
+      "exit": 0,
+      "stdout_lines": [
+        "?? ulteemate-three-card-evidence.json",
+        "?? ulteemate-three-card-ratification.md"
+      ],
+      "result": "only the two authorized paths shown"
+    },
+    {
+      "command": "ari_os.tools.orchestrate prepare",
+      "exit": 130,
+      "result": "stalled judgment subprocess interrupted; no prepared brief or metadata created"
+    },
+    {
+      "command": "ari_os.tools.dispatch start/list",
+      "exit": 0,
+      "stdout": "w-608e-ulteemate-three-card-ratification done",
+      "result": "detached executor completed"
+    },
+    {
+      "command": "ari_os.tools.orchestrate review",
+      "exit": 0,
+      "result": "Qwen and Ornith failed; Codex final review accepted content but was not independent"
+    },
+    {
+      "command": "inline Python drift-registry invariant check",
+      "exit": 0,
+      "stdout": "DRIFT_REGISTRY_OK: cases=4 coordinates_preserved=4 silent_rewrites=0 source_mutations=0",
+      "result": "four structured registry transitions preserve coordinate identity and required gates"
+    },
+    {
+      "command": "post-correction comprehensive audit",
+      "exit": 0,
+      "stdout": "FINAL_AUDIT_OK: cards=3 claims=15 universes=closed benchmark=10 drift=4 locators=35 safe_sources=7",
+      "result": "card structure, closed universes, benchmark count, drift invariants, locators, and source scope confirmed"
+    },
+    {
+      "command": "temporary-file cleanup check",
+      "exit": 0,
+      "stdout": "TEMP_CLEANUP_OK: orchestration_files=removed prepared_outputs=absent",
+      "result": "all temporary orchestration outputs removed; stalled prepare emitted no files"
+    },
+    {
+      "command": "final detached-worker status",
+      "exit": 0,
+      "stdout": "w-608e-ulteemate-three-card-ratification done       ulteemate-three-card-ratification",
+      "result": "detached executor completed"
+    },
+    {
+      "command": "python3 -m json.tool ulteemate-three-card-evidence.json >/dev/null && echo CORRECTION_JSON_OK",
+      "exit": 0,
+      "stdout": "CORRECTION_JSON_OK",
+      "result": "post-re-cut JSON valid"
+    },
+    {
+      "command": "inline Python exact resolver over inspection_scope.correction_review.changed_locators",
+      "exit": 0,
+      "stdout": "CORRECTION_LOCATORS_OK: changed=6 safe_recut=3 unresolved=0",
+      "result": "all six changed locators, including all three re-cut safe-packet locators, resolve exactly"
+    },
+    {
+      "command": "inline Python Card 1 universe, safe-section, collision, and coordinate-state validator",
+      "exit": 0,
+      "stdout": "CORRECTION_STATE_OK: live=4 ghosts=2 collisions=1 issued=1 candidates=2",
+      "result": "four live members, two future ghosts, one collision, one issued coordinate, and two candidates confirmed"
+    },
+    {
+      "command": "inline Python Markdown/JSON four-verdict validator",
+      "exit": 0,
+      "stdout": "CORRECTION_VERDICTS_OK: card1=ratify_with_explicit_provisional_fields card2=do_not_ratify card3=do_not_ratify slice=do_not_ratify",
+      "result": "all four verdicts agree across both artifacts"
+    },
+    {
+      "command": "inline Python prohibited-data, source-boundary, and correction-file-scope validator",
+      "exit": 0,
+      "stdout": "CORRECTION_SAFETY_OK: monetary_values=0 credentials=0 live_tree_sources=0 changed_files=2",
+      "result": "no monetary value, credential, or live-tree source introduced; correction file ledger contains exactly two paths"
+    },
+    {
+      "command": "inline Python final correction consistency audit after audit-trail update",
+      "exit": 0,
+      "stdout": "CORRECTION_FINAL_OK: json=valid locators=6 live=4 ghosts=2 collision=1 issued=ULT.OFR-001 downstream_blocked=2 slice=do_not_ratify",
+      "result": "final JSON, locator, universe, collision, issuance, downstream, and slice invariants confirmed"
+    },
+    {
+      "command": "python3 -m json.tool ulteemate-card2-evidence.json >/dev/null",
+      "exit": 0,
+      "result": "Card 2 JSON valid"
+    },
+    {
+      "command": "jq required-field/count gate over ulteemate-card2-evidence.json",
+      "exit": 0,
+      "stdout": "true",
+      "result": "8 sources, 22 claims, claim sets 4/6/3/6, 7 provisional fields, 8 conflict dispositions, issued Card 2, candidate Card 3, privacy flags false"
+    }
+  ],
+  "evidence_packet": {
+    "outcome": "ULT.OFR-001, ULT.OFR-002, and ULT.OFR-003 ratified with explicit provisional fields and issued; semantic slice ratified with known-negative fields; benchmark unrun",
+    "files_created": [
+      "comp11-cartographer/ulteemate-three-card-ratification.md",
+      "comp11-cartographer/ulteemate-three-card-evidence.json",
+      "comp11-cartographer/ulteemate-card2-ratification.md",
+      "comp11-cartographer/ulteemate-card2-evidence.json",
+      "comp11-cartographer/ulteemate-card2-REVIEW.md",
+      "comp11-cartographer/ulteemate-card3-ratification.md",
+      "comp11-cartographer/ulteemate-card3-evidence.json",
+      "comp11-cartographer/ulteemate-card3-REVIEW.md"
+    ],
+    "files_changed_by_correction": [
+      "comp11-cartographer/ulteemate-three-card-ratification.md",
+      "comp11-cartographer/ulteemate-three-card-evidence.json"
+    ],
+    "temporary_orchestration_files_created_and_removed": [
+      "/tmp/ulteemate-three-card-executor-brief.md",
+      "/tmp/ulteemate-three-card-review.md",
+      "/tmp/ulteemate-three-card-review.md.meta.json"
+    ],
+    "decisions_assumptions": [
+      "re-cut July 5 catalog plus SPEC section 24 and Survey Decision close the basic launch/offer evidence gap",
+      "ULT.OFR-001, ULT.OFR-002, and ULT.OFR-003 are issued and active; the semantic slice is ratified with explicit provisional and known-negative fields",
+      "Card 2 is an authority-ordered deny-by-default boundary and does not ratify efficacy, testimonial provenance, reviews, publication, assignment, or deployment",
+      "internal proof remains attributed-only; stronger outcomes remain prohibited without a future Steward update",
+      "final local policies govern non-financial wording but do not prove Shopify publication",
+      "Horizon observations are implementation evidence, not live deployment evidence",
+      "original_legacy_relation remains explicit, provisional, and non-blocking; Original and Legacy are not double-counted",
+      "Website/BRIEF remains historical intent; Card 3 uses separate current public readbacks without treating local code as exact live-source lineage",
+      "live Card 3 copy is known nonconforming with Card 2 and the expected supporting-policy route is missing",
+      "cart/checkout completion, exact live source revision, review/testimonial provenance, alternate policy publication, and media/accessibility QA retain conservative defaults",
+      "no empirical benchmark result or Cartographer advantage is claimed"
+    ],
+    "open_questions": [
+      "Is Original a strict Legacy alias, renamed predecessor, or another lineage relation?",
+      "Which artifact is the current intended PDP contract?",
+      "Which deployed-page or template-assignment record proves the current purchase expression?"
+    ],
+    "residual_risks": [
+      "stronger theme/Q&A language or internal evidence is mistaken for approved substantiation despite issued Card 2",
+      "local policy or theme implementation is mistaken for live deployment",
+      "Original/Legacy is double-counted or a ghost is promoted if issued Card 1 is ignored",
+      "independent benchmark not run",
+      "Card 2 review is an internal evidence gate, not the independent cold-reader pilot"
+    ],
+    "correction_scope_statement": "Card 1 correction was narrowly bounded; Card 2 later added a separate sanitized authority audit",
+    "safe_recut_statement": "product names, contents, and statuses restored; monetary and credential data remain excluded",
+    "prohibited_root_statement": "Card 2 source preparation inspected the UlteemateAI tree read-only in the maintainer session; dispatched/reviewing models saw only the isolated sanitized packet; no UlteemateAI file was modified",
+    "card1_correction_scope_statement": "correction reopened only the three authorized safe-packet sections and changed only the two authorized audit artifacts",
+    "card1_prohibited_root_statement": "UlteemateAI was neither accessed nor modified",
+    "card2_review": {
+      "worker": "w-cf11-comp11-card2-ratification",
+      "verdict": "ratify with explicit provisional fields",
+      "coordinate_state": "issued; active",
+      "formal_review": "conditionally accepted subject only to JSON completeness",
+      "json_valid": true,
+      "required_fields_complete": true,
+      "condition_cleared": true
+    }
+  },
+  "card2_ratification_update": {
+    "report": "ulteemate-card2-ratification.md",
+    "evidence": "ulteemate-card2-evidence.json",
+    "review": "ulteemate-card2-REVIEW.md",
+    "archival_condition": "JSON completeness",
+    "archival_condition_cleared": true,
+    "empirical_benchmark_run": false
+  }
+}
