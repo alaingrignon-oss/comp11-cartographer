@@ -5,18 +5,25 @@ A lightweight, reusable semantic map for ICM workspaces: stable coordinates
 and mutable source locators — so humans and agents can wayfind a workspace
 without duplicating its file tree.
 
+**Live map viewer:** https://alaingrignon-oss.github.io/comp11-cartographer/
+(static coverage treemap rendered from the evidence ledgers — no backend, no network)
+
 ## What's inside
 
 | Path | What it is |
 |------|------------|
 | `package/README.md` | Start here — what the map is and how to read it |
+| `package/engine/verify_map.py` | Deterministic verification: 7 structural gates + self-proving negative fixtures (`--selftest`) |
+| `package/engine/README.md` | Why the engine is model-agnostic and how its pattern generalizes to any local-model task |
 | `package/identity.md` | Territory/district identity rules |
 | `package/rules.md` | Coordinate grammar: cadastral districts, append-only parcels |
 | `package/examples.md` | Worked examples of reading and resolving coordinates |
 | `package/reference/catalog.md` | The semantic catalog for the worked territory |
 | `package/reference/cards/` | The three issued cards (`ULT.OFR-001..003`) |
 | `package/reference/registry/` | Machine-readable registry + worked resolution records (move+rename, collision+stale-locator) |
-| `explorer/app.py` | Interactive Streamlit explorer for the worked map |
+| `explorer/app.py` | Interactive Streamlit explorer for the worked map (local) |
+| `docs/index.html` | Hosted coverage treemap + card drill-down (GitHub Pages; rebuild with `python3 build_site.py`) |
+| `docs/receipts.md` | Quoted pilot receipts: the baseline failure, the drift head-to-head, discipline totals |
 
 ## How to walk this (cold model or human)
 

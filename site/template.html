@@ -85,12 +85,19 @@
   </table>
   <p class="sub">No curated mode touches Cards 2 or 3 alone — claim and purchase-expression work is never separate from each other.</p>
 
+  <h2>Deterministic engine</h2>
+  <p class="sub">The map's structural promises are enforced, not asserted. <code>package/engine/verify_map.py</code> — pure standard library, no model, no network:</p>
+  <div class="walk"><pre style="margin:4px 0;font-size:12.5px;overflow-x:auto">python3 package/engine/verify_map.py             # 7 gates: grammar · linkage · boundaries · ledger join · tombstones · locators · snapshot
+python3 package/engine/verify_map.py --selftest # corrupts a throwaway copy 5 ways — every gate must fire</pre></div>
+  <p class="sub">Model-agnostic by construction: cold-reader walks are plain prompts + file packets that any local or hosted model can execute. The same predeclared-question / matched-packet / mechanical-scoring pattern generalizes to any task where you need to prove a context tool helps. See <code>package/engine/README.md</code>.</p>
+
   <h2>Receipts</h2>
-  <p class="sub">Selected raw evidence from the matched-packet cold-reader pilot (36 tasks, transcripts preserved in-repo history).</p>
+  <p class="sub">Selected raw evidence from the matched-packet cold-reader pilot (36 tasks, two arms, two repetitions, predeclared key). Full receipts page: <a href="receipts.md"><code>docs/receipts.md</code></a>.</p>
   <ul>
-    <li><b>Necessity:</b> baseline readers without the map missed the entire Does-not-hit boundary on Q4 in both repetitions — the failure the map exists to prevent.</li>
-    <li><b>Drift advantage:</b> after a file move + heading rename, both cartographer-arm readers resolved the same noun via updated locator + alias; both baseline readers dead-ended on the stale citation and needed search recovery.</li>
-    <li><b>Discipline:</b> all 18 cartographer-arm walks stopped within two hops; zero sibling-card loads across 36 transcripts.</li>
+    <li><b>Necessity:</b> the unaided reader burned ~18 file opens and greps on the claims question and still never stated the required Does-not-hit boundary (both repetitions); the armed reader opened one card + four cited locators and stated it verbatim.</li>
+    <li><b>Drift advantage:</b> after a file move + heading rename, the baseline dead-ended on a 240-line read of a file whose heading no longer exists ("requires re-pointing"); both armed readers resolved the same noun via updated locator + alias with on-disk verification. Strictly better, both repetitions.</li>
+    <li><b>Discipline:</b> 18/18 cartographer-arm walks stopped within two hops; zero sibling-card loads; zero identity-safety or truth-safety violations across all 36 transcripts.</li>
+    <li><b>Benchmark totals:</b> 18/18 HIT (100%; safety-critical 8/8) · parity 14/14 vs 10/14 · median context bytes −44.9% · median files opened 2 vs ~5–6.5 · independently audited: "stands with listed corrections; no threshold impact."</li>
   </ul>
 
   <footer>
