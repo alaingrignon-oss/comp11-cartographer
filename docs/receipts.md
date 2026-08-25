@@ -77,6 +77,27 @@ cited sources and stopped; sibling cards were never opened; registry use was lim
 supplied resolution records; zero silent re-resolution to a different noun anywhere in
 either arm.
 
+## 4. Self-correction — when the map's own gate said no
+
+The strongest evidence a method works is a documented case where it refused its own
+authors. During ratification (2026-08-20), the first independent evidence audit **blocked
+all three cards**:
+
+> The first evidence-bounded audit incorrectly blocked all three cards because mechanical
+> financial redaction removed whole product rows. — SPEC.md §26
+
+The redaction step had deleted so much of the offer sources that the four-member live
+catalog could not be verified — including dropping the `Product Lineup` heading itself.
+The audit's `do not ratify` verdict was correct *given the evidence it was shown*. The fix
+was not to argue with the gate but to re-cut the safe packet preserving product names,
+contents, and statuses while still excluding every monetary value and credential; on
+re-review all three coordinates issued with explicit provisional fields.
+
+Lesson recorded in the map's own rules: **a missing artifact is not a missing fact** —
+redaction is evidence loss and must be repaired as evidence, never waved through. The
+historical `do not ratify` verdict stands unedited in the record (`SPEC.md` §26); only the
+later superseding decision (§28) is authoritative today.
+
 ---
 
 *Full transcripts and scoring grounds are retained in the authoring workspace; the

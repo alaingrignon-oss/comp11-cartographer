@@ -9,10 +9,20 @@ Cartographer map makes, so no reader — human or model — has to take them on 
 python3 package/engine/verify_map.py             # verify the map (7 gates)
 python3 package/engine/verify_map.py --selftest  # corrupt a throwaway copy 5 ways;
                                                  # every gate must fail its corruption
+python3 package/engine/run_walk.py --packet PACKET_DIR --question "..." \
+    --reader "ollama run llama3.2" --label q1-r1   # any CLI reader
+python3 package/engine/run_walk.py --packet PACKET_DIR --question "..." \
+    --label q1-human                               # or manual-paste mode: no model needed
 ```
 
 Pure Python standard library. No model call, no network, no database, no orchestrator,
 no vendor. Runs identically on a laptop with no internet.
+
+`run_walk.py` is the reader-agnostic harness: it freezes the exact prompt bytes, hashes
+the packet manifest into a receipt, executes any command as the reader (or prints paste
+instructions), and files the transcript — so walks are reproducible and comparable
+across models. Scoring stays external by design: apply the key you declared *before*
+running.
 
 | Gate | Promise it enforces |
 |---|---|

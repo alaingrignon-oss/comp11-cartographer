@@ -53,6 +53,30 @@ lineage-or-uncertainty result instead of being sent to a different noun?
 - **Result:** zero silent misresolutions across all 36 pilot transcripts (identity
   safety threshold).
 
+## Example 4 — A declined territory (the refusal walk)
+
+A cartographer that maps everything maps nothing. This walk shows the tool saying no,
+per the map-worthiness signals (`rules.md` §14) and the responsibility boundary
+(`identity.md`).
+
+- **Request:** "Map the Horizon theme templates — `index.json`,
+  `product.eca-pdp-bundle.json`, `page.shipping-returns.json` — so we know what the
+  storefront shows."
+- **Refusal:** declined as primary territory. Theme files are regenerated implementation
+  material whose only durable meaning is *as evidence of purchase expression* — they fail
+  the map-worthiness test (they do not own state or contracts independently; their
+  "what changes if I touch it" answer is fully absorbed by an existing coordinate). They
+  already appear where they belong: cited inside `ULT.OFR-003` as observed expression,
+  and listed in its Does-not-hit boundary as mechanics, never as offer truth.
+- **Also declined, same rules:** `product-design/` (a separate nested ICM workspace with
+  its own boundary), generated/build artifacts and binaries (no durable noun), recovery
+  machinery (structural tooling owns it), and this cartographer's own methodology (a map
+  that maps itself is recursion, not navigation).
+- **What the reader gets instead:** routed back to `workspace.md` for anything outside
+  the ratified slice — an explicit "uncovered by design" answer (`catalog.md` coverage
+  note) rather than a plausible-looking card. In the pilot this discipline was scored:
+  zero invented dependencies across 36 transcripts.
+
 ## What the benchmark showed (summary)
 
 | Threshold | Result |
