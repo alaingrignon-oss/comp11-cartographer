@@ -21,13 +21,13 @@ CATEGORY_ORDER = [
     "surfaces", "aliases", "open_fields",
 ]
 CATEGORY_META = {
-    "claims": {"label": "Ratified claims", "color": "#31597e"},
-    "hits": {"label": "Hits", "color": "#2f7d4f"},
-    "does_not_hit": {"label": "Does not hit", "color": "#a8443c"},
-    "sources": {"label": "Cited sources", "color": "#5b6d8f"},
-    "surfaces": {"label": "Surfaces touched", "color": "#4a7ba6"},
-    "aliases": {"label": "Aliases & collisions", "color": "#7a8a99"},
-    "open_fields": {"label": "Provisional & known-negative fields", "color": "#c07f2e"},
+    "claims": {"label": "Checked facts", "color": "#31597e"},
+    "hits": {"label": "Change these too", "color": "#2f7d4f"},
+    "does_not_hit": {"label": "Leave these alone", "color": "#a8443c"},
+    "sources": {"label": "Where we checked", "color": "#5b6d8f"},
+    "surfaces": {"label": "Where it shows up", "color": "#4a7ba6"},
+    "aliases": {"label": "Other names it goes by", "color": "#7a8a99"},
+    "open_fields": {"label": "Not settled yet", "color": "#c07f2e"},
 }
 
 

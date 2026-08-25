@@ -58,27 +58,27 @@
 </head>
 <body>
 <main>
-  <h1>Cartographer <span class="code">ULT.OFR</span> — offer truth map</h1>
-  <p class="sub">A semantic map of Ulteemate.com's live offer records: product offer → proof &amp; claim boundary → storefront page contract. Every tile below is a recorded fact from the evidence ledger; area is proportional to its text. This viewer renders the map — it is not the territory.</p>
+  <h1>The Ulteemate offer map <span class="code">ULT.OFR</span></h1>
+  <p class="sub">A GPS for the information our store can't afford to get wrong: what we sell, what we may promise, and what the buy pages must show. Each big idea has an address that never changes — even when files move or get new names. The blocks below are facts we checked; bigger block means we know more about it. This page describes the store — it isn't the store.</p>
 
   <div class="walk">
-    <b>Cold-reader walk (the whole design budget is two hops)</b>
+    <b>How to use this page — two steps, then stop</b>
     <ol>
-      <li>Pick your question from the treemap or work-mode table below.</li>
-      <li>Open <b>one</b> coordinate card — check Hits / Does-not-hit before touching anything.</li>
-      <li>Follow one cited source locator. If card and source disagree, the source wins.</li>
-      <li><b>Stop.</b> Never load sibling cards or the whole registry.</li>
+      <li>Find your question in the blocks below or in the table further down.</li>
+      <li>Open <b>one</b> card. It says what to change and what to leave alone.</li>
+      <li>Not sure? Open one of its "where we checked" links and see for yourself.</li>
+      <li><b>Stop.</b> You never need to read everything. That's the whole trick.</li>
     </ol>
   </div>
 
   <div class="bench">
-    <div class="stat"><b>3</b><span>ratified coordinates, append-only parcels</span></div>
-    <div class="stat"><b>17</b><span>evidence-graded claims behind them</span></div>
-    <div class="stat"><b>18/18</b><span>cold-reader pilot tasks hit (predeclared benchmark)</span></div>
-    <div class="stat"><b>&minus;44.9%</b><span>median context bytes vs. unaided readers</span></div>
+    <div class="stat"><b>3</b><span>big ideas, each with a permanent address</span></div>
+    <div class="stat"><b>17</b><span>facts, each one checked against the real thing</span></div>
+    <div class="stat"><b>18/18</b><span>test questions answered right by readers using the map</span></div>
+    <div class="stat"><b>&frac12;</b><span>the reading needed, compared to readers without the map</span></div>
   </div>
 
-  <h2>Coverage treemap</h2>
+  <h2>The whole territory at a glance</h2>
   <div class="controls">
     <label>Coordinate
       <select id="sel-card"><option value="">— whole map —</option></select></label>
@@ -94,14 +94,14 @@
 
   <div class="detail" id="detail" style="display:none;"></div>
 
-  <h2>Which coordinates move together — UpSet view</h2>
-  <p class="sub">Curated work modes → exact sets of coordinates they touch. Each column is one exact set; the bar counts how many work modes land on it; the linked dots name the members. Click a column for its modes.</p>
+  <h2>Which ideas move together?</h2>
+  <p class="sub">Some jobs touch one big idea. Some touch several. Each column below is one combination of ideas: the bar counts how many kinds of work need exactly that combination, and the dots show which ideas are in it. Click a column to see the jobs.</p>
   <div id="upset"></div>
-  <div class="legend" id="upset-note">Click a column to see which work modes share that exact set.</div>
+  <div class="legend" id="upset-note">Click a column to see which kinds of work share that combination.</div>
   <ul class="story">
-    <li><b>All three · OFR-001+002+003:</b> PDP planning, wayfinding, and change-impact review move all three together.</li>
-    <li><b>OFR-001 alone:</b> offer decisions start — and stop — at the offer itself.</li>
-    <li><b>OFR-002+003:</b> claim review always carries the page contract with it.</li>
+    <li><b>All three together:</b> big jobs — planning store pages or checking what a change would touch — move all three ideas at once.</li>
+    <li><b>The offer alone:</b> deciding what we sell starts and stops with the offer itself.</li>
+    <li><b>Promise + buy page:</b> changing a promise always means checking the buy page too — those two never travel alone.</li>
   </ul>
   <table class="matrix">
     <tr><th>Work mode</th><th>OFR-001 Product offer</th><th>OFR-002 Claim boundary</th><th>OFR-003 Page contract</th></tr>
@@ -111,38 +111,38 @@
     <tr><td>Source navigation &amp; wayfinding</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td></tr>
     <tr><td>Change-impact review</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td></tr>
   </table>
-  <p class="sub">No curated mode touches Cards 2 or 3 alone — claim and purchase-expression work is never separate from each other.</p>
+  <p class="sub">No kind of work ever touches the promise or the buy page alone — those two always change together, and every job that touches them also checks the offer.</p>
 
-  <h2>Use it on your own ICM workspace</h2>
-  <p class="sub">This package is a product <i>and</i> a factory. Full walkthrough: <a href="../package/MAPPING-GUIDE.md"><code>package/MAPPING-GUIDE.md</code></a>. The short version:</p>
+  <h2>Use it on your own workspace</h2>
+  <p class="sub">You can use this same kit to keep track of the important stuff in <i>your</i> project. Full walkthrough: <a href="../package/MAPPING-GUIDE.md"><code>package/MAPPING-GUIDE.md</code></a>. The short version:</p>
   <ol style="font-size:14px; padding-left:20px;">
-    <li><b>Copy the kit</b> — <code>cp -r package/ your-workspace-map/</code></li>
-    <li><b>Survey</b> — inventory durable nouns (not files); draft provisional cards; assign no numbers yet.</li>
-    <li><b>Ratify</b> — a human checks collisions and evidence grades, then issues permanent coordinates: append-only parcels, never renumbered.</li>
-    <li><b>Verify</b> — <code>python3 your-workspace-map/engine/verify_map.py YOUR-REPO --selftest</code>; the gates are territory-agnostic.</li>
-    <li><b>Cold-walk it</b> — predeclare questions, cut a packet, run any reader via <code>engine/run_walk.py</code>, keep receipts including failures.</li>
-    <li><b>Steward</b> — moves update locators + aliases, coordinates stay put; rerun the engine after every change.</li>
+    <li><b>Copy the folder.</b> That's the whole install.</li>
+    <li><b>List your big ideas</b> — not files. Write one draft card per idea. No addresses yet.</li>
+    <li><b>Have a person check the drafts</b>, then give each idea its permanent address. Addresses are forever — never reused, never renumbered.</li>
+    <li><b>Run the robot checker</b> on your copy. It also proves it can catch mistakes by breaking a pretend copy first.</li>
+    <li><b>Ask cold questions.</b> Give someone (or some AI) a question with no hints, save their answer as a receipt — mistakes included.</li>
+    <li><b>When files move:</b> update the note about where it lives now. The address itself never changes.</li>
   </ol>
 
-  <h2>Deterministic engine</h2>
-  <p class="sub">The map's structural promises are enforced, not asserted. <code>package/engine/verify_map.py</code> — pure standard library, no model, no network:</p>
-  <div class="walk"><pre style="margin:4px 0;font-size:12.5px;overflow-x:auto">python3 package/engine/verify_map.py             # 7 gates: grammar · linkage · boundaries · ledger join · tombstones · locators · snapshot
-python3 package/engine/verify_map.py --selftest # corrupts a throwaway copy 5 ways — every gate must fire</pre></div>
-  <p class="sub">Model-agnostic by construction: cold-reader walks are plain prompts + file packets that any local or hosted model can execute. The same predeclared-question / matched-packet / mechanical-scoring pattern generalizes to any task where you need to prove a context tool helps. See <code>package/engine/README.md</code>.</p>
+  <h2>The robot checker</h2>
+  <p class="sub">Computers can check this map the way a teacher checks homework. One command runs seven checks: do the addresses look right? Does every card say what to leave alone? Does every fact trace back to something real? A second command breaks a pretend copy of the map five different ways, to prove the checks actually catch problems. It runs offline, needs no special software, and works with any AI or none at all:</p>
+  <div class="walk"><pre style="margin:4px 0;font-size:12.5px;overflow-x:auto">python3 package/engine/verify_map.py             # run all 7 checks
+python3 package/engine/verify_map.py --selftest # break a pretend copy 5 ways — every check must notice</pre></div>
+  <p class="sub">The same trick — write the test questions first, give everyone the same materials, grade the answers mechanically — works for any task where you want to prove that extra information actually helps. See <code>package/engine/README.md</code>.</p>
 
-  <h2>Receipts</h2>
-  <p class="sub">Selected raw evidence from the matched-packet cold-reader pilot (36 tasks, two arms, two repetitions, predeclared key). Full receipts page: <a href="receipts.md"><code>docs/receipts.md</code></a>.</p>
+  <h2>Receipts — proof we did the homework</h2>
+  <p class="sub">Real answers from our tests, saved word for word (36 tries, half with the map and half without). More in <a href="receipts.md"><code>docs/receipts.md</code></a>.</p>
   <ul>
-    <li><b>Necessity:</b> the unaided reader burned ~18 file opens and greps on the claims question and still never stated the required Does-not-hit boundary (both repetitions); the armed reader opened one card + four cited locators and stated it verbatim.</li>
-    <li><b>Drift advantage:</b> after a file move + heading rename, the baseline dead-ended on a 240-line read of a file whose heading no longer exists ("requires re-pointing"); both armed readers resolved the same noun via updated locator + alias with on-disk verification. Strictly better, both repetitions.</li>
-    <li><b>Discipline:</b> 18/18 cartographer-arm walks stopped within two hops; zero sibling-card loads; zero identity-safety or truth-safety violations across all 36 transcripts.</li>
-    <li><b>Self-correction:</b> the map's first ratification audit blocked <i>all three cards</i> because financial redaction had deleted the offer rows — and the verdict was accepted, the packet re-cut, and only then did coordinates issue. A missing artifact is not a missing fact.</li>
-    <li><b>Benchmark totals:</b> 18/18 HIT (100%; safety-critical 8/8) · parity 14/14 vs 10/14 · median context bytes −44.9% · median files opened 2 vs ~5–6.5 · independently audited: "stands with listed corrections; no threshold impact."</li>
+    <li><b>Why the map matters:</b> one reader without it opened about 18 files hunting for an answer — and still never said which things to leave alone. Both times. With the map: open one card plus four links, and there's the full list, word for word.</li>
+    <li><b>When files move:</b> we moved a file and renamed its heading on purpose. Without the map, readers hit a dead end and had to go searching. With the map, they followed the saved old name straight to the new spot.</li>
+    <li><b>Stopping when told:</b> every reader with the map finished in two steps. Nobody went wandering.</li>
+    <li><b>We failed once, on purpose kept:</b> our first check failed <i>all three cards</i> because hiding the money numbers had erased the product list too. We accepted the failing grade and fixed the pages — never the check. A missing page is not a missing fact.</li>
+    <li><b>The score:</b> 18 out of 18 right with the map · readers needed about half the reading · an outside auditor checked our work and agreed, small bookkeeping fixes only.</li>
   </ul>
 
   <footer>
-    Rendered offline from <code>explorer/ulteemate-three-card-evidence.json</code> (snapshot as_of __ASOF__). No network calls, no analytics, no monetary or credential data.
-    Territory facts are date-bounded mutable locators; coordinates persist across moves and renames. Built with the ICM Architect skill, system-map form.
+    Made from the store's own record file (saved __ASOF__). This page calls no websites, shows no ads, keeps no secrets, and hides no prices.
+    Addresses stay put even when files move. Built with the ICM Architect skill, system-map form.
   </footer>
 </main>
 
@@ -172,8 +172,8 @@ function squarify(items, X, Y, W, H) {
 }
 
 function tmSub(){ return selectedCard
-  ? `Opened ${selectedCard.id} — every tile is one recorded fact; colour is its kind; area is its text length. Click a tile to jump to it in the card below.`
-  : 'Whole district view. Tile area = counted evidence text per coordinate. Click a coordinate to open it.'; }
+  ? `Inside ${selectedCard.id}. Each small block is one fact we wrote down — the colour tells you what kind, and bigger means more words. Click a block to find it in the card below.`
+  : 'All three big ideas. Bigger block = more facts we checked. Click one to open it.'; }
 
 function draw() {
   const el = document.getElementById('treemap');
@@ -335,7 +335,7 @@ function crumbs(){
 
 function legend(){
   const lg = document.getElementById('legend');
-  if(!selectedCard){ lg.innerHTML='Tile area = total recorded evidence text per coordinate (claims, hits, misses, sources, surfaces, aliases, open fields).'; return; }
+  if(!selectedCard){ lg.innerHTML='Bigger block = more facts we checked. Open an idea to see its facts, colour-coded.'; return; }
   lg.innerHTML = Object.entries(DATA.categories).map(([k,m])=>`<span class="sw" style="background:${m.color}"></span>${m.label}`).join('');
 }
 
