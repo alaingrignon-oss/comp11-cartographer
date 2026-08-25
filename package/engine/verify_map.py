@@ -101,7 +101,7 @@ def verify(root: Path) -> Report:
     pkg = root / "package"
     reg_text = read(pkg, "reference/registry/registry.yaml")
     reg = registry_blocks(reg_text)
-    evidence_paths = sorted((root / "explorer").glob("ulteemate-*-evidence.json"))
+    evidence_paths = sorted((root / "explorer").glob("*-evidence.json"))
     evidence: dict = {}
     for p in evidence_paths:
         try:
@@ -191,11 +191,14 @@ def verify(root: Path) -> Report:
             + (f"; problems: {problems}" if problems else ""))
 
     # G7 — evidence JSON parses and carries the audited snapshot fields.
-    main = evidence.get("ulteemate-three-card-evidence.json", {})
-    audit_ok = bool(main.get("audit", {}).get("as_of")) and bool(main.get("district"))
+    # G7 — evidence ledgers parse and at least one carries audited snapshot fields.
+    ledgers = [p for p in evidence.values() if isinstance(p, dict)]
+    as_of = next((p["audit"].get("as_of") for p in ledgers if p.get("audit", {}).get("as_of")), None)
+    district = next((p["district"]["code"] for p in ledgers
+                     if isinstance(p.get("district"), dict) and p["district"].get("code")), None)
+    audit_ok = bool(as_of) and bool(district)
     rep.add("G7-snapshot", audit_ok,
-            f"snapshot as_of={main.get('audit', {}).get('as_of', 'MISSING')}, "
-            f"district={main.get('district', {}).get('code', 'MISSING')}")
+            f"snapshot as_of={as_of or 'MISSING'}, district={district or 'MISSING'}")
     return rep
 
 

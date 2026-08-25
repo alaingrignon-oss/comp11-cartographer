@@ -113,6 +113,17 @@
   </table>
   <p class="sub">No curated mode touches Cards 2 or 3 alone — claim and purchase-expression work is never separate from each other.</p>
 
+  <h2>Use it on your own ICM workspace</h2>
+  <p class="sub">This package is a product <i>and</i> a factory. Full walkthrough: <a href="../package/MAPPING-GUIDE.md"><code>package/MAPPING-GUIDE.md</code></a>. The short version:</p>
+  <ol style="font-size:14px; padding-left:20px;">
+    <li><b>Copy the kit</b> — <code>cp -r package/ your-workspace-map/</code></li>
+    <li><b>Survey</b> — inventory durable nouns (not files); draft provisional cards; assign no numbers yet.</li>
+    <li><b>Ratify</b> — a human checks collisions and evidence grades, then issues permanent coordinates: append-only parcels, never renumbered.</li>
+    <li><b>Verify</b> — <code>python3 your-workspace-map/engine/verify_map.py YOUR-REPO --selftest</code>; the gates are territory-agnostic.</li>
+    <li><b>Cold-walk it</b> — predeclare questions, cut a packet, run any reader via <code>engine/run_walk.py</code>, keep receipts including failures.</li>
+    <li><b>Steward</b> — moves update locators + aliases, coordinates stay put; rerun the engine after every change.</li>
+  </ol>
+
   <h2>Deterministic engine</h2>
   <p class="sub">The map's structural promises are enforced, not asserted. <code>package/engine/verify_map.py</code> — pure standard library, no model, no network:</p>
   <div class="walk"><pre style="margin:4px 0;font-size:12.5px;overflow-x:auto">python3 package/engine/verify_map.py             # 7 gates: grammar · linkage · boundaries · ledger join · tombstones · locators · snapshot

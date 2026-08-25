@@ -8,6 +8,15 @@ without duplicating its file tree.
 **Live map viewer:** https://alaingrignon-oss.github.io/comp11-cartographer/
 (static coverage treemap rendered from the evidence ledgers — no backend, no network)
 
+## Use it on your OWN workspace
+
+This package is both product and factory: the worked Ulteemate map demonstrates it,
+the same folder is everything you need to map your own ICM workspace. Start here:
+**[`package/MAPPING-GUIDE.md`](package/MAPPING-GUIDE.md)** — six steps from copying
+the kit to stewarding your ratified slice, using only text files and the stdlib
+engine (`survey → ratify → verify → cold-walk → steward`). The verifier's gates and
+the walk harness are territory-agnostic by design.
+
 ## What's inside
 
 | Path | What it is |
