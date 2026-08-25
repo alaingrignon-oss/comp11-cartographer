@@ -1,0 +1,1108 @@
+{
+  "schema_version": "1.0",
+  "audit": {
+    "name": "ULT.OFR-003 Storefront product-page contract Ratification audit",
+    "as_of": "2026-08-20",
+    "mode": "document-based and evidence-bounded; not storefront compliance certification",
+    "verdict": "ratify with explicit provisional fields",
+    "coordinate": "ULT.OFR-003",
+    "coordinate_state": "issued; active",
+    "district": "ULT.OFR",
+    "district_name": "Offer truth and purchase expression",
+    "evidence_grade": {
+      "public_route_template_theme_product_data_and_form_observations": "A",
+      "public_local_one_object_four_variant_topology": "B",
+      "historical_intent_and_known_nonconforming_copy": "C",
+      "transactional_administrative_provenance_policy_publication_media_accessibility_and_source_revision_state": "D"
+    },
+    "empirical_benchmark_run": false
+  },
+  "verdict": {
+    "recommendation": "ratify with explicit provisional fields",
+    "coordinate_issued": true,
+    "coordinate_state": "issued; active",
+    "rationale": "Four current public Card 1 routes, canonical declarations, product-specific suffixes, a shared theme-name marker, product-data markers, and cart-add forms make the shared semantic contract source-citable; known negatives and unavailable state have explicit safe stop rules.",
+    "not_certified": [
+      "live copy compliance",
+      "successful cart mutation",
+      "checkout completion",
+      "inventory or fulfillment",
+      "policy-page publication beyond the observed expected route",
+      "review or testimonial authenticity",
+      "media or accessibility quality",
+      "admin assignment history",
+      "exact local-to-live source revision",
+      "empirical benchmark performance"
+    ],
+    "locators": [
+      "safe-card3-packet/current-routes-and-deployment.md#Collection observation",
+      "safe-card3-packet/current-routes-and-deployment.md#Product-route observation",
+      "safe-card3-packet/purchase-expression.md#Safe rule",
+      "safe-card3-packet/known-conflicts.md#Slice consequence"
+    ]
+  },
+  "source_ledger": [
+    {
+      "source_id": "C3-SRC-001",
+      "source_class": "issued offer identity and contents",
+      "authority": "ULT.OFR-001",
+      "establishes": [
+        "four live offer identities and contents",
+        "future-only ghost exclusions",
+        "Original/Legacy naming collision"
+      ],
+      "does_not_prove": [
+        "customer claims",
+        "page deployment",
+        "purchase completion"
+      ],
+      "grade": "A",
+      "locators": [
+        "ulteemate-three-card-ratification.md#Ratified object card 1 — Product offer",
+        "safe-card3-packet/source-authority.md#Existing Cartographer authority",
+        "SPEC.md#§24 Live-offer reconciliation"
+      ]
+    },
+    {
+      "source_id": "C3-SRC-002",
+      "source_class": "issued claim and policy boundary",
+      "authority": "ULT.OFR-002",
+      "establishes": [
+        "allowed and prohibited claim treatment",
+        "attributed-only internal proof treatment",
+        "local non-financial policy wording",
+        "deny-by-default provisional fields"
+      ],
+      "does_not_prove": [
+        "efficacy",
+        "testimonial provenance",
+        "review-system state",
+        "policy publication",
+        "theme deployment or assignment history"
+      ],
+      "grade": "A for governing boundary; C/D for bounded evidence fields",
+      "locators": [
+        "ulteemate-card2-ratification.md#Operational claim matrix",
+        "ulteemate-card2-ratification.md#Explicit provisional fields",
+        "safe-card3-packet/source-authority.md#Existing Cartographer authority"
+      ]
+    },
+    {
+      "source_id": "C3-SRC-003",
+      "source_class": "historical build intent and earlier Card 3 candidate",
+      "authority": "contract and historical intent only",
+      "establishes": [
+        "intended PDP sections",
+        "earlier absence-of-current-evidence blocker"
+      ],
+      "does_not_prove": [
+        "current public state",
+        "current administrative state"
+      ],
+      "grade": "C",
+      "locators": [
+        "ulteemate-three-card-ratification.md#Candidate object card 3 — Storefront product-page contract",
+        "safe-card3-packet/source-authority.md#Ordered authority"
+      ]
+    },
+    {
+      "source_id": "C3-SRC-004",
+      "source_class": "current local Horizon topology",
+      "authority": "implementation topology",
+      "establishes": [
+        "four dedicated template names",
+        "shared core sections",
+        "product-specific enabled and disabled variants"
+      ],
+      "does_not_prove": [
+        "deployment of the same file bytes",
+        "correct Shopify admin settings"
+      ],
+      "grade": "B with public corroboration; C alone",
+      "locators": [
+        "safe-card3-packet/pdp-contract.md#Current local Horizon topology",
+        "safe-card3-packet/source-authority.md#Ordered authority"
+      ]
+    },
+    {
+      "source_id": "C3-SRC-005",
+      "source_class": "anonymous current public route and rendering observations",
+      "authority": "direct public observation",
+      "establishes": [
+        "collection membership",
+        "route response and canonical state",
+        "exposed template suffix",
+        "public theme-name marker",
+        "rendered structure",
+        "form presence"
+      ],
+      "does_not_prove": [
+        "admin history",
+        "source revision",
+        "inventory",
+        "successful cart or checkout",
+        "review authenticity",
+        "accessibility quality"
+      ],
+      "grade": "A for directly observed facts",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Method",
+        "safe-card3-packet/current-routes-and-deployment.md#Collection observation",
+        "safe-card3-packet/current-routes-and-deployment.md#Product-route observation",
+        "safe-card3-packet/current-routes-and-deployment.md#Rendered page-shape observation"
+      ]
+    },
+    {
+      "source_id": "C3-SRC-006",
+      "source_class": "purchase-expression observation",
+      "authority": "direct public markup observation",
+      "establishes": [
+        "product-data binding",
+        "forms targeting /cart/add on all four routes"
+      ],
+      "does_not_prove": [
+        "successful cart mutation",
+        "checkout completion",
+        "payment",
+        "tax",
+        "inventory",
+        "fulfillment"
+      ],
+      "grade": "A for form and markup presence; D for transaction state",
+      "locators": [
+        "safe-card3-packet/purchase-expression.md#Verified on 2026-08-20",
+        "safe-card3-packet/purchase-expression.md#Not verified",
+        "safe-card3-packet/purchase-expression.md#Safe rule"
+      ]
+    },
+    {
+      "source_id": "C3-SRC-007",
+      "source_class": "known conflicts and negative observations",
+      "authority": "direct public negatives plus issued Card 2 boundary",
+      "establishes": [
+        "known live copy nonconformance",
+        "stale Legacy locator",
+        "missing expected policy route",
+        "bounded provenance, media, and source-revision gaps"
+      ],
+      "does_not_prove": [
+        "resolution of any gap"
+      ],
+      "grade": "A for observed negative facts; C/D for unresolved fields",
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults",
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations"
+      ]
+    },
+    {
+      "source_id": "C3-SRC-008",
+      "source_class": "privacy and unavailable-state boundary",
+      "authority": "sanitized packet method",
+      "establishes": [
+        "anonymous read-only observation method",
+        "explicit privacy and state exclusions"
+      ],
+      "does_not_prove": [
+        "any excluded private, administrative, or transactional state"
+      ],
+      "grade": "D for unavailable state",
+      "locators": [
+        "safe-card3-packet/README.md#Snapshot",
+        "safe-card3-packet/README.md#Privacy boundary",
+        "safe-card3-packet/current-routes-and-deployment.md#Limits"
+      ]
+    }
+  ],
+  "claim_ledger": [
+    {
+      "claim_id": "C3-CLM-001",
+      "claim": "Card 3 consumes Card 1 offer facts and Card 2 claim and policy rules and cannot broaden either.",
+      "evidence_kind": "issued semantic authority",
+      "grade": "A",
+      "locators": [
+        "safe-card3-packet/source-authority.md#Existing Cartographer authority",
+        "safe-card3-packet/README.md#Required audit discipline"
+      ],
+      "limit": "Page presence never creates offer or claim authority."
+    },
+    {
+      "claim_id": "C3-CLM-002",
+      "claim": "One shared purchase-expression rule with four product-specific variants is the smallest useful semantic object.",
+      "evidence_kind": "Ratification finding",
+      "grade": "B",
+      "locators": [
+        "safe-card3-packet/pdp-contract.md#One semantic object",
+        "safe-card3-packet/pdp-contract.md#Current local Horizon topology",
+        "SPEC.md#§14 Proposed map-worthiness test",
+        "SPEC.md#§15 Proposed granularity rule"
+      ],
+      "limit": "It is not four independent offer cards or a theme-component inventory."
+    },
+    {
+      "claim_id": "C3-CLM-003",
+      "claim": "/collections/all returned 200 and linked exactly the four Card 1 offers; no ghost was presented in the observed collection.",
+      "evidence_kind": "public observation",
+      "grade": "A",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Collection observation"
+      ],
+      "limit": "This does not prove that no unlinked ghost route exists elsewhere."
+    },
+    {
+      "claim_id": "C3-CLM-004",
+      "claim": "Each of the four collection-linked product routes returned 200 and declared its expected canonical route.",
+      "evidence_kind": "public observation",
+      "grade": "A",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Product-route observation"
+      ],
+      "limit": "Route success is not inventory or transaction proof."
+    },
+    {
+      "claim_id": "C3-CLM-005",
+      "claim": "Bundle, Solo, Legacy, and Spare Spikes expose eca-pdp-bundle, eca-pdp-solo, eca-pdp-legacy, and eca-pdp-spikes respectively.",
+      "evidence_kind": "public template-suffix observation",
+      "grade": "A",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Product-route observation"
+      ],
+      "limit": "Exposed suffixes do not prove admin assignment history or exact deployed bytes."
+    },
+    {
+      "claim_id": "C3-CLM-006",
+      "claim": "All four routes expose the same public theme-name marker: Live Ulteemate 2 — 2026-07-25.",
+      "evidence_kind": "public theme-marker observation",
+      "grade": "A",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Product-route observation"
+      ],
+      "limit": "The marker is not a commit or source-revision identifier."
+    },
+    {
+      "claim_id": "C3-CLM-007",
+      "claim": "Each public PDP exposes product-data markup and two forms targeting /cart/add.",
+      "evidence_kind": "public markup observation",
+      "grade": "A",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Product-route observation",
+        "safe-card3-packet/purchase-expression.md#Verified on 2026-08-20"
+      ],
+      "limit": "Form presence does not prove a successful cart or checkout."
+    },
+    {
+      "claim_id": "C3-CLM-008",
+      "claim": "Public purchase expression and product-specific template assignment are observed for the four routes.",
+      "evidence_kind": "bounded deployment finding",
+      "grade": "A",
+      "locators": [
+        "safe-card3-packet/purchase-expression.md#Safe rule"
+      ],
+      "limit": "Cart completion, checkout completion, inventory, admin assignment history, and source revision remain unverified."
+    },
+    {
+      "claim_id": "C3-CLM-009",
+      "claim": "The four local templates share product-information and value-proposition ownership while optional sections vary by offer; Spare Spikes is intentionally smaller.",
+      "evidence_kind": "local topology corroborated by public structure",
+      "grade": "B",
+      "locators": [
+        "safe-card3-packet/pdp-contract.md#Current local Horizon topology",
+        "safe-card3-packet/current-routes-and-deployment.md#Rendered page-shape observation"
+      ],
+      "limit": "Exact local-to-live revision lineage remains unverified."
+    },
+    {
+      "claim_id": "C3-CLM-010",
+      "claim": "Current deployed PDP wording is known nonconforming with Card 2 because it includes immediate or first-use certainty and other stronger outcome framing.",
+      "evidence_kind": "public conflict plus issued semantic boundary",
+      "grade": "C for copy; known negative",
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults",
+        "ulteemate-card2-ratification.md#Operational claim matrix"
+      ],
+      "limit": "Live presence does not authorize stronger wording."
+    },
+    {
+      "claim_id": "C3-CLM-011",
+      "claim": "The current Legacy route is /products/ulteemate-legacy-bundle; the older route returns 404 with canonical /404.",
+      "evidence_kind": "public positive and negative observation",
+      "grade": "A",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Collection observation",
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations"
+      ],
+      "limit": "Do not infer a redirect, fifth offer, or exact Original/Legacy lineage."
+    },
+    {
+      "claim_id": "C3-CLM-012",
+      "claim": "/pages/shipping-returns returns 404 with canonical /404 despite a local dedicated template.",
+      "evidence_kind": "public negative plus local topology",
+      "grade": "A for missing expected route",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations",
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+      ],
+      "limit": "No claim is made about a differently located policy page."
+    },
+    {
+      "claim_id": "C3-CLM-013",
+      "claim": "Review and testimonial markers render, but source, consent, ratings, and external review-system state are unverified.",
+      "evidence_kind": "public presentation plus provenance gap",
+      "grade": "A for presentation; D for provenance",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Rendered page-shape observation",
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+      ],
+      "limit": "Do not authenticate or repeat named or verified-review claims."
+    },
+    {
+      "claim_id": "C3-CLM-014",
+      "claim": "Media and video markers render, but completeness, playback, captions, and accessibility were not tested.",
+      "evidence_kind": "markup observation plus QA gap",
+      "grade": "C for markers; D for QA",
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults",
+        "safe-card3-packet/current-routes-and-deployment.md#Limits"
+      ],
+      "limit": "No functional or accessible-media claim is allowed."
+    },
+    {
+      "claim_id": "C3-CLM-015",
+      "claim": "No cart form was submitted and no checkout was entered.",
+      "evidence_kind": "method limit",
+      "grade": "D for completion",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations",
+        "safe-card3-packet/purchase-expression.md#Not verified"
+      ],
+      "limit": "Purchase expression is observed; transaction completion is not."
+    },
+    {
+      "claim_id": "C3-CLM-016",
+      "claim": "No exact correspondence between the local working tree and deployed theme revision was established.",
+      "evidence_kind": "provenance limit",
+      "grade": "D",
+      "locators": [
+        "safe-card3-packet/purchase-expression.md#Not verified",
+        "safe-card3-packet/current-routes-and-deployment.md#Limits"
+      ],
+      "limit": "Matching suffixes and structure provide Grade B corroboration only."
+    },
+    {
+      "claim_id": "C3-CLM-017",
+      "claim": "The semantic contract may be issued with explicit fields even while the live implementation is nonconforming and incompletely tested.",
+      "evidence_kind": "Ratification decision",
+      "grade": "mixed",
+      "locators": [
+        "safe-card3-packet/README.md#Required audit discipline",
+        "safe-card3-packet/known-conflicts.md#Slice consequence"
+      ],
+      "limit": "Issuance is not compliance, checkout, provenance, accessibility, source-revision, or benchmark certification."
+    }
+  ],
+  "verified_public_routes_and_deployment": {
+    "observation_date": "2026-08-20",
+    "method": "anonymous read-only public fetch with redirects followed; extracted facts only; raw HTML excluded",
+    "collection": {
+      "route": "/collections/all",
+      "http_status": 200,
+      "linked_offer_count": 4,
+      "matches_card1_membership": true,
+      "ghosts_presented_in_observed_collection": [],
+      "limit": "does not prove absence of unlinked ghost routes elsewhere",
+      "locator": "safe-card3-packet/current-routes-and-deployment.md#Collection observation"
+    },
+    "routes": [
+      {
+        "offer": "Ulteemate 2.0 Bundle",
+        "route": "/products/ulteemate-2-0-bundle",
+        "http_status": 200,
+        "canonical_matches_route": true,
+        "template_suffix": "eca-pdp-bundle",
+        "theme_name_marker": "Live Ulteemate 2 — 2026-07-25",
+        "product_data_markup": true,
+        "cart_add_form_count": 2
+      },
+      {
+        "offer": "Ulteemate 2.0 Solo",
+        "route": "/products/ulteemate-drive-system-2-0",
+        "http_status": 200,
+        "canonical_matches_route": true,
+        "template_suffix": "eca-pdp-solo",
+        "theme_name_marker": "Live Ulteemate 2 — 2026-07-25",
+        "product_data_markup": true,
+        "cart_add_form_count": 2
+      },
+      {
+        "offer": "Ulteemate Legacy Bundle",
+        "route": "/products/ulteemate-legacy-bundle",
+        "http_status": 200,
+        "canonical_matches_route": true,
+        "template_suffix": "eca-pdp-legacy",
+        "theme_name_marker": "Live Ulteemate 2 — 2026-07-25",
+        "product_data_markup": true,
+        "cart_add_form_count": 2
+      },
+      {
+        "offer": "Ulteemate 2.0 Spare Spikes / Spike Pack",
+        "route": "/products/ulteemate-2-0-spike-pack",
+        "http_status": 200,
+        "canonical_matches_route": true,
+        "template_suffix": "eca-pdp-spikes",
+        "theme_name_marker": "Live Ulteemate 2 — 2026-07-25",
+        "product_data_markup": true,
+        "cart_add_form_count": 2
+      }
+    ],
+    "status": {
+      "public_offer_collection": "four_card1_offers_observed",
+      "public_product_routes": "four_200_canonical_routes_observed",
+      "template_assignment": "observed_for_four_routes",
+      "public_theme_marker": "observed_shared_for_four_routes",
+      "public_purchase_expression": "observed",
+      "cart_transaction_completion": "unverified",
+      "checkout_completion": "unverified",
+      "live_source_revision": "unverified"
+    },
+    "locators": [
+      "safe-card3-packet/current-routes-and-deployment.md#Collection observation",
+      "safe-card3-packet/current-routes-and-deployment.md#Product-route observation",
+      "safe-card3-packet/purchase-expression.md#Verified on 2026-08-20",
+      "safe-card3-packet/purchase-expression.md#Safe rule"
+    ]
+  },
+  "known_negative_and_nonconforming_states": [
+    {
+      "field": "live_copy_conformance_to_card2",
+      "state": "known_nonconforming",
+      "known_fact": "current deployed PDP wording includes immediate or first-use certainty and other stronger outcome framing prohibited by Card 2",
+      "safe_disposition": "Card 2 controls; remediate and re-observe before claiming conformance",
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults",
+        "ulteemate-card2-ratification.md#Operational claim matrix"
+      ]
+    },
+    {
+      "field": "legacy_old_route",
+      "state": "stale_locator_404",
+      "known_fact": "/products/ulteemate-tee-golf-drive-improvement-system returned 404 with canonical /404",
+      "safe_disposition": "use /products/ulteemate-legacy-bundle and infer neither redirect nor fifth offer",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations"
+      ]
+    },
+    {
+      "field": "supporting_policy_route",
+      "state": "missing_at_expected_path",
+      "known_fact": "/pages/shipping-returns returned 404 with canonical /404 despite a local dedicated template",
+      "safe_disposition": "do not claim publication of the dedicated policy page; Card 2 local policy remains wording authority only",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations",
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+      ]
+    }
+  ],
+  "provisional_fields": [
+    {
+      "field": "cart_and_checkout_completion",
+      "state": "unverified",
+      "blocking": false,
+      "known": "product-data markers and forms targeting /cart/add are present on all four routes; no form was submitted",
+      "safe_default": "claim public purchase expression only; make no cart-mutation or checkout-success claim",
+      "resolution_evidence": "dated authorized route-by-route cart-add and checkout smoke record without customer, account, payment, or credential data",
+      "locators": [
+        "safe-card3-packet/purchase-expression.md#Verified on 2026-08-20",
+        "safe-card3-packet/purchase-expression.md#Not verified"
+      ]
+    },
+    {
+      "field": "live_source_revision",
+      "state": "unverified",
+      "blocking": false,
+      "known": "public suffixes and structure corroborate local template names and topology",
+      "safe_default": "grade topology match B and make no exact-byte or revision-lineage claim",
+      "resolution_evidence": "dated deployment record linking the public theme marker and four assignments to an exact approved source revision plus current readback",
+      "locators": [
+        "safe-card3-packet/pdp-contract.md#Current local Horizon topology",
+        "safe-card3-packet/current-routes-and-deployment.md#Limits"
+      ]
+    },
+    {
+      "field": "review_and_testimonial_provenance",
+      "state": "unverified",
+      "blocking": false,
+      "known": "review and testimonial presentation markers render",
+      "safe_default": "omit named, authenticated, rating, and verified-review claims; treat markers as presentation only",
+      "resolution_evidence": "exact-source and consent or release records plus authenticated current review-system readback",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Rendered page-shape observation",
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults",
+        "ulteemate-card2-ratification.md#Explicit provisional fields"
+      ]
+    },
+    {
+      "field": "supporting_policy_publication",
+      "state": "known_missing_at_expected_path; other locations not established",
+      "blocking": false,
+      "known": "/pages/shipping-returns returned 404 with canonical /404",
+      "safe_default": "do not claim a dedicated supporting-policy page is published; use Card 2 local wording only where appropriate",
+      "resolution_evidence": "current 200 canonical policy-route readback matching approved local text, or an explicit current alternate-route designation and readback",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations",
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+      ]
+    },
+    {
+      "field": "media_and_accessibility_qa",
+      "state": "unverified",
+      "blocking": false,
+      "known": "media and video markers render on observed pages",
+      "safe_default": "make no asset-completeness, playback, captions, or accessibility claim",
+      "resolution_evidence": "dated QA record covering completeness, playback, captions or transcripts, alt text, keyboard behavior, focus, contrast, and relevant screen-reader checks",
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults",
+        "safe-card3-packet/current-routes-and-deployment.md#Limits"
+      ]
+    }
+  ],
+  "safe_defaults": {
+    "claims": "Card 2 closed set controls; live presence never authorizes stronger copy.",
+    "offer_facts": "Card 1 controls names, membership, contents, and ghost status.",
+    "transaction": "forms and product-data markers prove purchase expression only.",
+    "reviews_and_testimonials": "rendered markers are presentation only until provenance and external state are authenticated.",
+    "policy_publication": "the expected route is known missing; use local policy as wording authority only.",
+    "source_revision": "matching suffixes and topology are Grade B corroboration, not revision lineage.",
+    "media_and_accessibility": "marker presence creates no functional or accessibility claim.",
+    "locators": [
+      "safe-card3-packet/README.md#Required audit discipline",
+      "safe-card3-packet/purchase-expression.md#Safe rule",
+      "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+    ]
+  },
+  "card": {
+    "coordinate": "ULT.OFR-003",
+    "coordinate_state": "issued; active",
+    "landmark": "Storefront product-page contract",
+    "one_sentence": "Storefront product-page contract is the purchase-facing expression rule under which each Card 1 live offer has a canonical product page that consumes Card 2's closed claim gate, exposes product selection and cart-add affordances, and stops before inferring transaction, provenance, policy-publication, accessibility, admin, or source-revision facts.",
+    "aliases": [
+      "PDP contract",
+      "product-page contract",
+      "purchase surface",
+      "storefront expression",
+      "four-route PDP family",
+      "product-template assignment"
+    ],
+    "why_this_shape": "One coordinate captures shared ownership, required inputs, core purchase expression, and stop rules while four product-specific suffixes and optional-section configurations remain variants rather than duplicated semantic objects.",
+    "why_this_shape_locators": [
+      "safe-card3-packet/pdp-contract.md#One semantic object",
+      "safe-card3-packet/pdp-contract.md#Current local Horizon topology",
+      "SPEC.md#§14 Proposed map-worthiness test",
+      "SPEC.md#§15 Proposed granularity rule"
+    ],
+    "map_worthiness": {
+      "signals_passed": 6,
+      "signals_total": 6,
+      "map_worthiness_test_met": true,
+      "granularity_result": "one semantic object with four product-specific variants",
+      "reason": "distinct task noun; owns durable purchase-expression rule; changes independently; clear boundaries; spans authority, topology, and public observations; answers declared cold-reader question"
+    },
+    "current_public_locators": {
+      "Ulteemate 2.0 Bundle": "/products/ulteemate-2-0-bundle",
+      "Ulteemate 2.0 Solo": "/products/ulteemate-drive-system-2-0",
+      "Ulteemate Legacy Bundle": "/products/ulteemate-legacy-bundle",
+      "Ulteemate 2.0 Spare Spikes / Spike Pack": "/products/ulteemate-2-0-spike-pack"
+    },
+    "shape": [
+      {
+        "order": 1,
+        "element": "identity_and_route",
+        "rule": "One observed canonical product route per Card 1 live offer; ghosts receive no purchasable expression under this contract.",
+        "locators": [
+          "safe-card3-packet/pdp-contract.md#Required shape",
+          "safe-card3-packet/current-routes-and-deployment.md#Collection observation"
+        ]
+      },
+      {
+        "order": 2,
+        "element": "product_information",
+        "rule": "Title, media, selection controls, availability expression, quantity, and add-to-cart affordance.",
+        "locators": [
+          "safe-card3-packet/pdp-contract.md#Required shape"
+        ]
+      },
+      {
+        "order": 3,
+        "element": "offer_facts",
+        "rule": "Names, membership, and contents come only from Card 1, never stale theme copy.",
+        "locators": [
+          "safe-card3-packet/source-authority.md#Existing Cartographer authority",
+          "safe-card3-packet/pdp-contract.md#Required shape"
+        ]
+      },
+      {
+        "order": 4,
+        "element": "claims_and_policies",
+        "rule": "Benefit, proof, FAQ, testimonial or review, shipping, return, and guarantee language must pass Card 2's closed gate; current live deviations remain known_nonconforming until corrected and re-observed.",
+        "locators": [
+          "safe-card3-packet/README.md#Required audit discipline",
+          "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+        ]
+      },
+      {
+        "order": 5,
+        "element": "variant_family",
+        "rule": "Bundle, Solo, Legacy, and Spare Spikes use dedicated semantic suffixes and a shared core; optional how-to, media or proof, founder, FAQ, review, and recommendation sections vary by offer.",
+        "locators": [
+          "safe-card3-packet/pdp-contract.md#Current local Horizon topology",
+          "safe-card3-packet/current-routes-and-deployment.md#Product-route observation"
+        ]
+      },
+      {
+        "order": 6,
+        "element": "purchase_expression",
+        "rule": "Product-data binding and cart-add forms are required; successful cart and checkout are separate verification surfaces.",
+        "locators": [
+          "safe-card3-packet/pdp-contract.md#Required shape",
+          "safe-card3-packet/purchase-expression.md#Safe rule"
+        ]
+      },
+      {
+        "order": 7,
+        "element": "deployment_record",
+        "rule": "Preserve public route, canonical path, exposed suffix, public theme marker, observation date, and evidence limits; local code alone is insufficient.",
+        "locators": [
+          "safe-card3-packet/pdp-contract.md#Required shape",
+          "safe-card3-packet/source-authority.md#Ordered authority"
+        ]
+      }
+    ],
+    "connected_to": [
+      {
+        "target": "ULT.OFR-001",
+        "relation": "consumes live and ghost membership, canonical offer names, and contents",
+        "locators": [
+          "safe-card3-packet/source-authority.md#Existing Cartographer authority"
+        ]
+      },
+      {
+        "target": "ULT.OFR-002",
+        "relation": "consumes all claim and policy treatment without broadening it",
+        "locators": [
+          "safe-card3-packet/source-authority.md#Existing Cartographer authority"
+        ]
+      },
+      {
+        "target": "audience material",
+        "relation": "uses only for empathy and information order, never product or proof authority",
+        "locators": [
+          "safe-card3-packet/pdp-contract.md#Connected to"
+        ]
+      },
+      {
+        "target": "Horizon and public storefront",
+        "relation": "uses Horizon as implementation topology and public storefront as current rendering observation",
+        "locators": [
+          "safe-card3-packet/pdp-contract.md#Connected to",
+          "safe-card3-packet/source-authority.md#Ordered authority"
+        ]
+      }
+    ],
+    "hits": [
+      "product title and offer name",
+      "collection link, route, canonical locator, and stale locator status",
+      "media and product selectors",
+      "availability, quantity, and add-to-cart expression",
+      "offer contents as consumed facts",
+      "benefits and features",
+      "how-to",
+      "FAQ",
+      "policy snippets and links",
+      "proof, review, and testimonial presentation",
+      "founder story",
+      "related offers",
+      "product-specific template suffix assignment",
+      "page-level publication observation"
+    ],
+    "hits_locators": [
+      "safe-card3-packet/pdp-contract.md#Hits"
+    ],
+    "does_not_hit": [
+      "offer membership or contents as source truth",
+      "efficacy substantiation",
+      "testimonial consent or provenance",
+      "external review-system records",
+      "theme code mechanics unrelated to page expression",
+      "cart or checkout completion",
+      "payment, tax, inventory, fulfillment, customer, or account state",
+      "CAD or product design",
+      "campaign execution",
+      "recovery artifacts",
+      "financial values",
+      "credentials"
+    ],
+    "does_not_hit_locators": [
+      "safe-card3-packet/pdp-contract.md#Does not hit",
+      "safe-card3-packet/purchase-expression.md#Not verified",
+      "safe-card3-packet/README.md#Privacy boundary"
+    ],
+    "surfaces": [
+      "PDP planning and review",
+      "storefront content QA",
+      "product-template assignment readback",
+      "public route checks",
+      "Card 2 claim-compliance review",
+      "first-order change-impact routing"
+    ],
+    "surfaces_locators": [
+      "safe-card3-packet/pdp-contract.md#Surfaces"
+    ],
+    "see": [
+      "safe-card3-packet/source-authority.md#Ordered authority",
+      "safe-card3-packet/pdp-contract.md#Required shape",
+      "safe-card3-packet/pdp-contract.md#Current local Horizon topology",
+      "safe-card3-packet/current-routes-and-deployment.md#Collection observation",
+      "safe-card3-packet/current-routes-and-deployment.md#Product-route observation",
+      "safe-card3-packet/current-routes-and-deployment.md#Negative observations",
+      "safe-card3-packet/purchase-expression.md#Safe rule",
+      "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+    ],
+    "as_of": "2026-08-20",
+    "status": "ratified with explicit provisional fields",
+    "status_fields": {
+      "coordinate_state": "issued_active",
+      "public_offer_collection": "four_card1_offers_observed",
+      "public_product_routes": "four_200_canonical_routes_observed",
+      "template_assignment": "observed_for_four_routes",
+      "public_theme_marker": "observed_shared_for_four_routes",
+      "public_purchase_expression": "observed",
+      "live_copy_conformance_to_card2": "known_nonconforming",
+      "legacy_old_route": "stale_locator_404",
+      "supporting_policy_route": "missing_at_expected_path",
+      "empirical_benchmark_run": false
+    },
+    "evidence_grade": {
+      "public_observations": "A",
+      "public_local_topology": "B",
+      "historical_and_nonconforming_copy": "C",
+      "unavailable_external_state": "D"
+    },
+    "provisional_field_names": [
+      "cart_and_checkout_completion",
+      "live_source_revision",
+      "review_and_testimonial_provenance",
+      "supporting_policy_publication",
+      "media_and_accessibility_qa"
+    ]
+  },
+  "conflict_dispositions": [
+    {
+      "conflict_id": "C3-CONFLICT-001",
+      "name": "live copy versus Card 2",
+      "disposition": "live_copy_conformance_to_card2 is known_nonconforming; Card 2 controls and the live wording requires remediation and dated re-observation",
+      "known_negative": true,
+      "provisional": false,
+      "blocks_semantic_issuance": false,
+      "blocks_compliance_claim": true,
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults",
+        "ulteemate-card2-ratification.md#Operational claim matrix"
+      ]
+    },
+    {
+      "conflict_id": "C3-CONFLICT-002",
+      "name": "historical assignment uncertainty versus exposed public suffixes",
+      "disposition": "template assignment is observed for four routes and the public theme marker is shared; admin history and exact source revision remain unverified",
+      "known_negative": false,
+      "provisional": true,
+      "blocks_semantic_issuance": false,
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Product-route observation",
+        "safe-card3-packet/source-authority.md#Ordered authority"
+      ]
+    },
+    {
+      "conflict_id": "C3-CONFLICT-003",
+      "name": "current Legacy route versus stale old handle",
+      "disposition": "use the current Legacy route; retain the 404 old route only as a stale locator; infer neither redirect nor fifth offer",
+      "known_negative": true,
+      "provisional": false,
+      "blocks_semantic_issuance": false,
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations",
+        "safe-card3-packet/source-authority.md#Existing Cartographer authority"
+      ]
+    },
+    {
+      "conflict_id": "C3-CONFLICT-004",
+      "name": "local supporting-policy template versus missing expected public route",
+      "disposition": "supporting_policy_route is missing_at_expected_path; do not claim dedicated policy-page publication; Card 2 local policy remains wording authority only",
+      "known_negative": true,
+      "provisional": true,
+      "blocks_semantic_issuance": false,
+      "blocks_policy_publication_claim": true,
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations",
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+      ]
+    },
+    {
+      "conflict_id": "C3-CONFLICT-005",
+      "name": "rendered review or testimonial markers versus provenance",
+      "disposition": "presentation is observed; provenance and authenticity remain unverified; omit named and verified-review claims",
+      "known_negative": false,
+      "provisional": true,
+      "blocks_semantic_issuance": false,
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Rendered page-shape observation",
+        "ulteemate-card2-ratification.md#Explicit provisional fields"
+      ]
+    },
+    {
+      "conflict_id": "C3-CONFLICT-006",
+      "name": "cart-add forms versus transaction completion",
+      "disposition": "form and product-data presence establish public purchase expression only; cart and checkout completion remain unverified",
+      "known_negative": false,
+      "provisional": true,
+      "blocks_semantic_issuance": false,
+      "locators": [
+        "safe-card3-packet/purchase-expression.md#Not verified",
+        "safe-card3-packet/purchase-expression.md#Safe rule"
+      ]
+    },
+    {
+      "conflict_id": "C3-CONFLICT-007",
+      "name": "public and local topology match versus exact source revision",
+      "disposition": "topology match is Grade B; live_source_revision remains unverified",
+      "known_negative": false,
+      "provisional": true,
+      "blocks_semantic_issuance": false,
+      "locators": [
+        "safe-card3-packet/pdp-contract.md#Current local Horizon topology",
+        "safe-card3-packet/current-routes-and-deployment.md#Limits"
+      ]
+    },
+    {
+      "conflict_id": "C3-CONFLICT-008",
+      "name": "media markers versus completeness and accessibility",
+      "disposition": "marker presence is observed; media_and_accessibility_qa remains unverified and no functional or accessibility claim is permitted",
+      "known_negative": false,
+      "provisional": true,
+      "blocks_semantic_issuance": false,
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+      ]
+    }
+  ],
+  "card2_provisional_field_implications": {
+    "field": "theme_deployment_and_template_assignment",
+    "prior_state": "unverified",
+    "result": "partially_closed",
+    "closed_branches": {
+      "template_assignment": "observed_for_four_routes",
+      "public_theme_marker": "observed_shared_for_four_routes"
+    },
+    "open_branches": {
+      "admin_assignment_history": "unverified",
+      "live_source_revision": "unverified"
+    },
+    "claim_boundary_changed": false,
+    "copy_implication": "known live nonconformance requires remediation; live presence does not broaden Card 2",
+    "additional_field_updates": {
+      "policy_publication_state": {
+        "result": "partially_narrowed",
+        "known_branch": "expected supporting-policy route missing on 2026-08-20",
+        "open_branch": "publication at any alternate route remains unverified",
+        "safe_default": "treat Card 2 local policy text as wording authority only; make no publication claim",
+        "locators": [
+          "safe-card3-packet/current-routes-and-deployment.md#Negative observations",
+          "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+        ]
+      },
+      "review_ui_and_external_review_state": {
+        "result": "partially_narrowed",
+        "known_branch": "review and testimonial presentation markers observed on public pages",
+        "open_branch": "record provenance, consent, ratings, and external review-system state remain unverified",
+        "safe_default": "treat markers as presentation only and retain Card 2 deny-by-default provenance rules",
+        "locators": [
+          "safe-card3-packet/current-routes-and-deployment.md#Rendered page-shape observation",
+          "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+        ]
+      }
+    },
+    "locators": [
+      "ulteemate-card2-ratification.md#Explicit provisional fields",
+      "safe-card3-packet/current-routes-and-deployment.md#Product-route observation",
+      "safe-card3-packet/source-authority.md#Ordered authority",
+      "safe-card3-packet/purchase-expression.md#Not verified",
+      "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+    ]
+  },
+  "steward_rules": [
+    {
+      "rule_id": "C3-STEWARD-001",
+      "trigger": "Card 1 offer name, contents, membership, or ghost status changes",
+      "action": "require Card 1 Steward approval first, then Card 2 review and Card 3 review of collection links, routes, titles, contents, selectors, forms, and related offers",
+      "locators": [
+        "safe-card3-packet/pdp-contract.md#Connected to",
+        "safe-card3-packet/pdp-contract.md#Hits"
+      ]
+    },
+    {
+      "rule_id": "C3-STEWARD-002",
+      "trigger": "Card 2 claim or policy changes",
+      "action": "review all four Card 3 variants wherever promises, benefits, proof, FAQ, policy, testimonials, reviews, or related copy appear; do not change offer membership",
+      "locators": [
+        "ulteemate-card2-ratification.md#Issued object card — ULT.OFR-002 Proof and claim boundary",
+        "safe-card3-packet/pdp-contract.md#Hits"
+      ]
+    },
+    {
+      "rule_id": "C3-STEWARD-003",
+      "trigger": "page-only composition, optional section, route locator, suffix, or observed theme marker changes",
+      "action": "update Card 3 while preserving Card 1 and Card 2 if semantic identity remains verified",
+      "locators": [
+        "SPEC.md#§9 Evolution contract",
+        "safe-card3-packet/pdp-contract.md#Does not hit"
+      ]
+    },
+    {
+      "rule_id": "C3-STEWARD-004",
+      "trigger": "ordinary route, file, or heading move",
+      "action": "preserve ULT.OFR-003, update mutable locators, and retain aliases; broken locators become broken or uncertain without reconstruction",
+      "locators": [
+        "SPEC.md#§9 Evolution contract",
+        "SPEC.md#§16 Responsibility boundary"
+      ]
+    },
+    {
+      "rule_id": "C3-STEWARD-005",
+      "trigger": "ghost promotion, offer-family split or merge, ambiguous route identity, ownership transfer, or proposed widening of Card 2",
+      "action": "return to a human Steward or Ratification gate before changing identity or authority",
+      "locators": [
+        "SPEC.md#§13 Proposed map lifecycle",
+        "safe-card3-packet/README.md#Required audit discipline"
+      ]
+    },
+    {
+      "rule_id": "C3-STEWARD-006",
+      "trigger": "attempt to clear known nonconformance or missing policy route",
+      "action": "require approved remediation and dated public readback; never silently downgrade a known negative to unknown or resolved",
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+      ]
+    },
+    {
+      "rule_id": "C3-STEWARD-007",
+      "trigger": "route, suffix, product-data marker, or cart-add form disappears",
+      "action": "change the corresponding observation status and review Card 3 without silently retiring or renumbering the coordinate",
+      "locators": [
+        "safe-card3-packet/purchase-expression.md#Verified on 2026-08-20",
+        "SPEC.md#§9 Evolution contract"
+      ]
+    }
+  ],
+  "slice_implication": {
+    "coordinates": {
+      "ULT.OFR-001": "issued; active",
+      "ULT.OFR-002": "issued; active",
+      "ULT.OFR-003": "issued; active"
+    },
+    "slice_state": "ratified with explicit provisional and known-negative fields",
+    "semantic_chain": [
+      "Product offer",
+      "Proof and claim boundary",
+      "Storefront product-page contract"
+    ],
+    "not_compliance_certification": true,
+    "empirical_benchmark_run": false,
+    "benchmark_thresholds_claimed_passed": [],
+    "locators": [
+      "safe-card3-packet/known-conflicts.md#Slice consequence",
+      "SPEC.md#§26 Three-card Ratification checkpoint — 2026-08-20",
+      "BENCHMARK.md#Pass thresholds",
+      "BENCHMARK.md#Pilot evidence rule"
+    ]
+  },
+  "residual_risks_and_next_evidence": [
+    {
+      "risk_id": "C3-RISK-001",
+      "risk": "prohibited live wording is treated as approved or misleads customers",
+      "next_evidence": "approved Card 2 conformance matrix followed by dated public readbacks of all four PDPs showing prohibited phrasing removed and final wording classified",
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+      ]
+    },
+    {
+      "risk_id": "C3-RISK-002",
+      "risk": "form presence is mistaken for working purchase flow",
+      "next_evidence": "dated authorized route-by-route cart-add and checkout smoke record with no customer, account, payment, or credential data exposed",
+      "locators": [
+        "safe-card3-packet/purchase-expression.md#Not verified"
+      ]
+    },
+    {
+      "risk_id": "C3-RISK-003",
+      "risk": "local topology is mistaken for exact live source",
+      "next_evidence": "deployment record tying public theme marker and current four-route assignments to an exact approved source revision, verified by readback",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Limits"
+      ]
+    },
+    {
+      "risk_id": "C3-RISK-004",
+      "risk": "missing expected supporting-policy route leaves publication ambiguous",
+      "next_evidence": "current 200 canonical readback of the approved route and content, or explicit alternate canonical route with matching policy text",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Negative observations"
+      ]
+    },
+    {
+      "risk_id": "C3-RISK-005",
+      "risk": "rendered review or testimonial presentation is treated as authentic",
+      "next_evidence": "exact quote or source and consent records plus authenticated review-system readback showing provenance and current rendering",
+      "locators": [
+        "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults"
+      ]
+    },
+    {
+      "risk_id": "C3-RISK-006",
+      "risk": "media is assumed complete or accessible",
+      "next_evidence": "dated media and accessibility QA record covering playback, completeness, captions or transcripts, alt text, keyboard and focus, contrast, and relevant screen-reader behavior",
+      "locators": [
+        "safe-card3-packet/current-routes-and-deployment.md#Limits"
+      ]
+    },
+    {
+      "risk_id": "C3-RISK-007",
+      "risk": "semantic map performance is assumed without an independent pilot",
+      "next_evidence": "independent cold-reader pilot preserving frozen source snapshot, prompts, answers, and raw counts",
+      "locators": [
+        "BENCHMARK.md#Conditions",
+        "BENCHMARK.md#Pilot evidence rule"
+      ]
+    }
+  ],
+  "privacy_attestation": {
+    "evidence_read_scope": "assigned sanitized worker directory only",
+    "parent_territory_repository_accessed": false,
+    "environment_variables_accessed": false,
+    "git_configuration_accessed": false,
+    "credential_stores_accessed": false,
+    "network_services_accessed": false,
+    "shopify_admin_or_app_accounts_accessed": false,
+    "external_saas_accessed": false,
+    "cart_or_checkout_mutation_performed": false,
+    "excluded_information_requested_or_reconstructed": false,
+    "financial_values_used": false,
+    "contact_addresses_used": false,
+    "account_or_customer_data_used": false,
+    "store_identifiers_used": false,
+    "raw_page_bodies_used": false,
+    "credentials_or_tokens_used": false,
+    "runtime_instruction_exception": "workflow instruction files outside the evidence directory were loaded as required by the execution environment; they supplied no territory facts and did not broaden the evidence boundary",
+    "locators": [
+      "safe-card3-packet/README.md#Snapshot",
+      "safe-card3-packet/README.md#Privacy boundary"
+    ]
+  },
+  "empirical_benchmark_run": false
+}

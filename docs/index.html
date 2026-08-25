@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comp 11 Cartographer — ULT.OFR offer map</title>
+<style>
+  :root { --accent:#31597e; --ink:#22303c; --muted:#5b6a78; --line:#dfe4ea; --bg:#f7f8fa; --warn:#c07f2e; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:#fff; line-height:1.45; }
+  main { max-width:1020px; margin:0 auto; padding:24px 20px 60px; }
+  h1 { font-size:26px; margin:18px 0 4px; } h1 .code { color:var(--accent); }
+  h2 { font-size:19px; margin:34px 0 8px; border-bottom:2px solid var(--line); padding-bottom:6px;}
+  p.sub { color:var(--muted); margin:2px 0 10px; }
+  .chip { display:inline-block; padding:2px 10px; border-radius:12px; font-size:12.5px; background:#eef2f6; border:1px solid var(--line); margin:0 4px 4px 0; }
+  .chip.accent { background:var(--accent); color:#fff; border-color:var(--accent);}
+  .walk { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:12px 16px; margin:14px 0; }
+  .walk ol { margin:6px 0 2px; padding-left:20px; }
+  .crumbs { font-size:13.5px; margin:10px 0 6px; color:var(--muted);}
+  .crumbs a { cursor:pointer; color:var(--accent); text-decoration:none; }
+  #treemap svg { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:8px; background:var(--bg);}
+  #treemap rect.tile { stroke:#fff; stroke-width:1.5; cursor:pointer; transition:opacity .12s; }
+  #treemap rect.tile:hover { opacity:.85; }
+  #treemap text { pointer-events:none; font-family:inherit; }
+  .legend { font-size:12.5px; color:var(--muted); margin-top:6px; }
+  .legend .sw { display:inline-block; width:11px; height:11px; border-radius:2px; margin:0 4px 0 10px; vertical-align:-1px;}
+  table.matrix { border-collapse:collapse; font-size:13.5px; width:100%; margin-top:8px;}
+  table.matrix th, table.matrix td { border:1px solid var(--line); padding:6px 10px; text-align:left; }
+  table.matrix th { background:var(--bg); }
+  td.yes { color:var(--accent); font-weight:600; text-align:center;} td.no { color:#b6bec7; text-align:center;}
+  .detail { border:1px solid var(--line); border-radius:8px; margin-top:14px; overflow:hidden;}
+  .detail .head { background:var(--accent); color:#fff; padding:10px 16px; }
+  .detail .head .grade { float:right; font-size:12.5px; opacity:.92; margin-top:2px;}
+  .detail section { padding:10px 16px; border-top:1px solid var(--line);}
+  .detail section:nth-child(even) { background:#fbfcfd;}
+  .detail h3 { margin:4px 0 6px; font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted);}
+  .detail ul { margin:2px 0; padding-left:20px;} .detail li { margin-bottom:3px; font-size:14px;}
+  .bench { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0;}
+  .bench .stat { flex:1 1 150px; background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:10px 12px;}
+  .bench .stat b { display:block; font-size:20px; color:var(--accent);}
+  .bench .stat span { font-size:12.5px; color:var(--muted);}
+  footer { margin-top:40px; font-size:12.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:12px;}
+  .flash { animation:fl 1.2s ease-out; } @keyframes fl { 0%{background:#fdf3e3;} 100%{background:transparent;} }
+</style>
+</head>
+<body>
+<main>
+  <h1>Cartographer <span class="code">ULT.OFR</span> — offer truth map</h1>
+  <p class="sub">A semantic map of Ulteemate.com's live offer records: product offer → proof &amp; claim boundary → storefront page contract. Every tile below is a recorded fact from the evidence ledger; area is proportional to its text. This viewer renders the map — it is not the territory.</p>
+
+  <div class="walk">
+    <b>Cold-reader walk (the whole design budget is two hops)</b>
+    <ol>
+      <li>Pick your question from the treemap or work-mode table below.</li>
+      <li>Open <b>one</b> coordinate card — check Hits / Does-not-hit before touching anything.</li>
+      <li>Follow one cited source locator. If card and source disagree, the source wins.</li>
+      <li><b>Stop.</b> Never load sibling cards or the whole registry.</li>
+    </ol>
+  </div>
+
+  <div class="bench">
+    <div class="stat"><b>3</b><span>ratified coordinates, append-only parcels</span></div>
+    <div class="stat"><b>17</b><span>evidence-graded claims behind them</span></div>
+    <div class="stat"><b>18/18</b><span>cold-reader pilot tasks hit (predeclared benchmark)</span></div>
+    <div class="stat"><b>&minus;44.9%</b><span>median context bytes vs. unaided readers</span></div>
+  </div>
+
+  <h2>Coverage treemap</h2>
+  <p class="sub" id="tm-sub">Whole district view. Click a coordinate to open it.</p>
+  <div class="crumbs" id="crumbs"></div>
+  <div id="treemap"></div>
+  <div class="legend" id="legend"></div>
+
+  <div class="detail" id="detail" style="display:none;"></div>
+
+  <h2>Which coordinates move together</h2>
+  <p class="sub">Curated work modes → exact sets of coordinates they touch. Read a row before starting work of that kind.</p>
+  <table class="matrix">
+    <tr><th>Work mode</th><th>OFR-001 Product offer</th><th>OFR-002 Claim boundary</th><th>OFR-003 Page contract</th></tr>
+    <tr><td>Offer &amp; product decisions</td><td class="yes">●</td><td class="no">—</td><td class="no">—</td></tr>
+    <tr><td>Copy, proof &amp; policy review</td><td class="no">—</td><td class="yes">●</td><td class="yes">●</td></tr>
+    <tr><td>Storefront / PDP planning &amp; QA</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td></tr>
+    <tr><td>Source navigation &amp; wayfinding</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td></tr>
+    <tr><td>Change-impact review</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td></tr>
+  </table>
+  <p class="sub">No curated mode touches Cards 2 or 3 alone — claim and purchase-expression work is never separate from each other.</p>
+
+  <h2>Receipts</h2>
+  <p class="sub">Selected raw evidence from the matched-packet cold-reader pilot (36 tasks, transcripts preserved in-repo history).</p>
+  <ul>
+    <li><b>Necessity:</b> baseline readers without the map missed the entire Does-not-hit boundary on Q4 in both repetitions — the failure the map exists to prevent.</li>
+    <li><b>Drift advantage:</b> after a file move + heading rename, both cartographer-arm readers resolved the same noun via updated locator + alias; both baseline readers dead-ended on the stale citation and needed search recovery.</li>
+    <li><b>Discipline:</b> all 18 cartographer-arm walks stopped within two hops; zero sibling-card loads across 36 transcripts.</li>
+  </ul>
+
+  <footer>
+    Rendered offline from <code>explorer/ulteemate-three-card-evidence.json</code> (snapshot as_of __ASOF__). No network calls, no analytics, no monetary or credential data.
+    Territory facts are date-bounded mutable locators; coordinates persist across moves and renames. Built with the ICM Architect skill, system-map form.
+  </footer>
+</main>
+
+<script>
+const DATA = {"district": {"code": "ULT.OFR", "name": "Offer truth and purchase expression"}, "asOf": "2026-08-20", "cards": [{"id": "ULT.OFR-001", "landmark": "Product offer", "sentence": "Date-bounded identity of exactly four live offers, one Original/Legacy naming collision, and exactly two future-only names that must never be presented as purchasable.", "status": "ratified with explicit provisional fields", "grade": "A", "as_of": "2026-08-20", "connected_to": [{"target": "ULT.OFR-002", "relation": "", "locators": []}, {"target": "ULT.OFR-003", "relation": "", "locators": []}], "items": {"claims": ["Ulteemate 2.0 launched 2026-07-01; the re-cut July 5 section observes both the live launch theme and the correct, available four-member catalog", "launch offer has exactly four members: 2.0 Bundle, 2.0 Solo, Legacy Bundle, and 2.0 Spare Spikes / Spike Pack as one refill offer", "Original versus Legacy Bundle is one naming collision, not two live offers and not a fifth offer", "Trainer and Boller/Super Bundle are exactly two future-only ghosts and are non-purchasable", "May 1 plan is leftover history, not launch completion proof or current operating truth", "current PDP deployment, guarantee terms, and Shopify product/purchase wiring are absent from bounded evidence; the basic launch/offer outcome is no longer absent", "prior missing-offer-artifact conclusion was caused by mechanical financial redaction removing whole table rows; the re-cut preserves names, contents, and statuses while excluding monetary and credential data"], "hits": ["claim/packaging review", "product-page title/contents/recommendations/purchase expression", "spike-reorder naming if identity changes"], "does_not_hit": ["theme implementation", "CAD/product design", "Meta/Klaviyo execution", "financials", "credentials", "recovery state"], "sources": ["SPEC.md#§24 Live-offer reconciliation", "ulteemate-survey-DECISION.md#Live offer reconciliation", "safe-source-packet/Marketing/Plans/post-launch-gtm_draft.md#The situation (verified July 5)", "safe-source-packet/company-product-description.md#Product Lineup", "safe-source-packet/Website/BRIEF.md#Product Lineup"], "surfaces": ["human offer decisions", "copy planning", "PDP briefing", "semantic navigation"], "aliases": ["live offer", "launch offer", "2.0 lineup", "product catalog", "Original/Legacy collision", "Ulteemate 2.0 Spike Pack", "Ulteemate 2.0 Spare Spike Pack"], "open_fields": ["original_legacy_relation", "original_legacy_relation"]}, "counts": {"claims": 7, "hits": 3, "does_not_hit": 6, "sources": 5, "surfaces": 4, "aliases": 7, "open_fields": 2}, "volume": 1667}, {"id": "ULT.OFR-002", "landmark": "Proof and claim boundary", "sentence": "Proof and claim boundary is the durable rule that permits only current narrow wording and policy language, confines internal results to attributed evidence, defers offer contents to Card 1, and blocks unsubstantiated, unauthenticated, or undeployed claims.", "status": "ratified with explicit provisional fields", "grade": "core boundary A, internal stale or draft evidence C, external or deployed state D", "as_of": "2026-08-20", "connected_to": [{"target": "ULT.OFR-001", "relation": "consumes current offer names and contents", "locators": ["safe-card2-packet/source-authority.md#Existing Cartographer authority"]}, {"target": "ULT.OFR-003", "relation": "supplies allowed, prohibited, attributed-only, policy, and unverified-state rules", "locators": ["safe-card2-packet/copy-and-proof.md#Current customer-facing copy contract", "safe-card2-packet/policies.md#Authority boundary"]}, {"target": "workspace.md", "relation": "uses structural routing only", "locators": ["safe-card2-packet/source-authority.md#workspace.md"]}], "items": {"claims": ["copy contract forbids technical manufacturing and distance/yardage promises; only narrower straighter/more-consistent phrasing is permitted", "product-truth file records internal founder, field-test, trainer, and family proof assertions", "audience copy contains yardage, immediate-result, and guarantee language that conflicts with the narrower copy contract", "Website/BRIEF records an intended two-row lineup, page content, and Shopify tasks but is contract/plan evidence rather than deployment proof", "current PDP deployment, guarantee terms, and Shopify product/purchase wiring are absent from bounded evidence; the basic launch/offer outcome is no longer absent", "ULT.OFR-002 is an issued authority-ordered, deny-by-default claim boundary with seven explicit non-blocking provisional fields"], "hits": ["product-page promises and benefits", "proof blocks", "Q&A and FAQ", "guarantee/returns and shipping wording", "testimonials and review presentation", "objection-busters", "packaging and feature copy", "customer-facing offer descriptions that repeat a changed claim"], "does_not_hit": ["offer membership or contents as facts", "financial values or the maintainer-local free-shipping threshold", "theme layout/code mechanics", "live deployment or SaaS configuration", "CAD or physical product design", "campaign execution", "credentials", "independent validation itself"], "sources": ["safe-card2-packet/source-authority.md#Source authority ledger", "safe-card2-packet/copy-and-proof.md#Current customer-facing copy contract", "safe-card2-packet/copy-and-proof.md#Internal proof assertions", "safe-card2-packet/policies.md#Guarantee and returns", "safe-card2-packet/policies.md#Shipping", "safe-card2-packet/storefront-claims.md#Canonical Horizon storefront claim observations", "safe-card2-packet/known-conflicts.md#Known conflicts and decision points", "safe-card2-packet/source-authority.md#Existing Cartographer authority"], "surfaces": ["human and agent copy review", "PDP contract drafting", "policy placement review", "packaging and customer-facing proof review"], "aliases": ["claim guardrails", "proof policy", "substantiation boundary", "guarantee boundary", "copy rules", "testimonial boundary", "shipping wording boundary"], "open_fields": ["independent_efficacy_substantiation", "named_testimonial_provenance", "review_ui_and_external_review_state", "policy_publication_state", "theme_deployment_and_template_assignment", "planned_refill_qr_print_scan_status", "free_shipping_threshold"]}, "counts": {"claims": 6, "hits": 8, "does_not_hit": 8, "sources": 8, "surfaces": 4, "aliases": 7, "open_fields": 7}, "volume": 2235}, {"id": "ULT.OFR-003", "landmark": "Storefront product-page contract", "sentence": "Purchase-facing expression rule under which each Card 1 live offer has a canonical page that consumes Card 2's closed claim gate, exposes product selection and cart-add affordances, and stops before inferring transaction, provenance, publication, accessibility, admin, or source-revision facts.", "status": "ratified with explicit provisional fields", "grade": "A for public route/template/form observations; B for corroborated topology; C for known nonconforming copy; D for unavailable external fields", "as_of": "2026-08-20", "connected_to": [{"target": "ULT.OFR-001", "relation": "", "locators": []}, {"target": "ULT.OFR-002", "relation": "", "locators": []}, {"target": "safe-source-packet/audience.md#The Primary Avatar", "relation": "", "locators": []}], "items": {"claims": ["Card 3 consumes Card 1 offer facts and Card 2 claim and policy rules and cannot broaden either. [grade A]", "/collections/all returned 200 and linked exactly the four Card 1 offers; no ghost was presented in the observed collection. [grade A]", "Bundle, Solo, Legacy, and Spare Spikes expose eca-pdp-bundle, eca-pdp-solo, eca-pdp-legacy, and eca-pdp-spikes respectively. [grade A]", "Each public PDP exposes product-data markup and two forms targeting /cart/add. [grade A]", "Current deployed PDP wording is known nonconforming with Card 2 because it includes immediate or first-use certainty and other stronger outcome framing. [grade C for copy; known negative]", "/pages/shipping-returns returns 404 with canonical /404 despite a local dedicated template. [grade A for missing expected route]", "The semantic contract may be issued with explicit fields even while the live implementation is nonconforming and incompletely tested. [grade mixed]"], "hits": ["title", "promise/benefits/features", "contents", "guarantee/returns", "FAQ", "media/testimonials", "recommendations", "CTA expression", "canonical route and stale locator status", "product-specific template assignment", "page-level publication observation"], "does_not_hit": ["offer membership or contents as source truth", "efficacy or testimonial provenance", "cart or checkout completion", "inventory, fulfillment, customer, or account state", "unrelated theme-code mechanics", "CAD/product design", "campaign execution", "recovery artifacts"], "sources": ["safe-card3-packet/source-authority.md#Ordered authority", "safe-card3-packet/pdp-contract.md#Required shape", "safe-card3-packet/current-routes-and-deployment.md#Product-route observation", "safe-card3-packet/current-routes-and-deployment.md#Negative observations", "safe-card3-packet/purchase-expression.md#Safe rule", "safe-card3-packet/known-conflicts.md#Known conflicts and safe defaults", "ulteemate-card3-ratification.md#Issued object card — ULT.OFR-003 Storefront product-page contract"], "surfaces": ["PDP planning and review", "storefront content QA", "product-template assignment readback", "public route checks", "Card 2 claim-compliance review"], "aliases": ["PDP contract", "product-page contract", "purchase surface", "storefront expression", "four-route PDP family", "product-template assignment"], "open_fields": ["known negative: live_copy_conformance_to_card2", "known negative: legacy_old_route", "known negative: supporting_policy_route", "cart_and_checkout_completion", "live_source_revision", "review_and_testimonial_provenance", "supporting_policy_publication", "media_and_accessibility_qa"]}, "counts": {"claims": 7, "hits": 11, "does_not_hit": 8, "sources": 7, "surfaces": 5, "aliases": 6, "open_fields": 8}, "volume": 2344}], "categories": {"claims": {"label": "Ratified claims", "color": "#31597e"}, "hits": {"label": "Hits", "color": "#2f7d4f"}, "does_not_hit": {"label": "Does not hit", "color": "#a8443c"}, "sources": {"label": "Cited sources", "color": "#5b6d8f"}, "surfaces": {"label": "Surfaces touched", "color": "#4a7ba6"}, "aliases": {"label": "Aliases & collisions", "color": "#7a8a99"}, "open_fields": {"label": "Provisional & known-negative fields", "color": "#c07f2e"}}};
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let selectedCard = null;
+
+function squarify(items, X, Y, W, H) {
+  const total = items.reduce((s,d)=>s+d.v,0);
+  const scale = (W*H)/total;
+  const vals = items.map(d=>({...d, v:d.v*scale})).sort((a,b)=>b.v-a.v);
+  const out = []; let x=X,y=Y,w=W,h=H,rest=vals;
+  const worst=(row,a,s)=>{const mx=Math.max(...row.map(r=>r.v)),mn=Math.min(...row.map(r=>r.v));return Math.max((s*s*mx)/(a*a),(a*a)/(s*s*mn));};
+  while(rest.length){
+    const s=Math.min(w,h);
+    let row=[rest[0]],ra=rest[0].v; rest=rest.slice(1);
+    let best=worst(row,ra,s);
+    while(rest.length){
+      const cw=row.concat([rest[0]]),ca=ra+rest[0].v,cworst=worst(cw,ca,s);
+      if(cworst<=best){row=cw;ra=ca;best=cworst;rest=rest.slice(1);}else break;
+    }
+    if(w>=h){const rw=ra/h;let cy=y;for(const r of row){const rh=Math.max(r.v/rw,0.001);out.push({...r,x,y:cy,w:rw,h:rh});cy+=rh;}x+=rw;w-=rw;}
+    else{const rh=ra/w;let cx=x;for(const r of row){const rw2=Math.max(r.v/rh,0.001);out.push({...r,x:cx,y,w:rw2,h:rh});cx+=rw2;}y+=rh;h-=rh;}
+  }
+  return out;
+}
+
+function tmSub(){ return selectedCard
+  ? `Opened ${selectedCard.id} — every tile is one recorded fact; colour is its kind; area is its text length. Click a tile to jump to it in the card below.`
+  : 'Whole district view. Tile area = counted evidence text per coordinate. Click a coordinate to open it.'; }
+
+function draw() {
+  const el = document.getElementById('treemap');
+  const W=980,H=420;
+  let nodes=[];
+  if(!selectedCard){
+    nodes = DATA.cards.map(c=>({v:c.volume, label:c.landmark, sub:c.id, count:Object.values(c.counts).reduce((a,b)=>a+b,0)+' facts', color:'#31597e', big:true, act:()=>select(c.id)}));
+  } else {
+    const c = DATA.cards.find(x=>x.id===selectedCard);
+    for(const k of Object.keys(c.items)){
+      c.items[k].forEach((t,i)=>nodes.push({v:Math.max(t.length,24), label:t, sub:'', color:DATA.categories[k].color, act:()=>jumpCat(k)}));
+    }
+  }
+  const rects = squarify(nodes.map(n=>({v:n.v,ref:n})),0,0,W,H);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="coverage treemap">`;
+  for(const r of rects){
+    const n=r.ref, pad=6;
+    const fs = n.big ? Math.max(15,Math.min(21,r.w/9)) : Math.max(10,Math.min(13.5,r.h/3.2));
+    svg += `<g tabindex="0" role="button" aria-label="${esc(n.label)}">`;
+    svg += `<rect class="tile" x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="5" fill="${n.color}" data-n="${nodes.indexOf(n)}"/>`;
+    if(r.w>64 && r.h>30){
+      const maxChars = Math.floor(r.w/(fs*0.56));
+      const l1 = n.big ? n.sub : (n.label.length>maxChars? n.label.slice(0,maxChars-1)+'…' : n.label);
+      svg += `<text x="${r.x+pad}" y="${r.y+(n.big?fs+8:fs+2)}" font-size="${fs}" fill="#fff">${esc(l1)}</text>`;
+      if(n.big && r.h>fs+38){
+        const fs2=fs*0.72;
+        svg += `<text x="${r.x+pad}" y="${r.y+fs+8+fs2+4}" font-size="${fs2}" fill="#dbe5ee">${esc(n.label)}</text>`;
+        svg += `<text x="${r.x+pad}" y="${r.y+r.h-pad}" font-size="${fs2}" fill="#c3d2df">${esc(n.count)}</text>`;
+      }
+    }
+    svg += `</g>`;
+  }
+  svg+='</svg>';
+  el.innerHTML = svg;
+  el.querySelectorAll('rect.tile').forEach(rt=>{
+    rt.addEventListener('click',()=>nodes[+rt.dataset.n].act());
+  });
+  document.getElementById('tm-sub').textContent = tmSub();
+  crumbs(); legend(); detail();
+}
+
+function select(id){ selectedCard = id===selectedCard? null : id; draw(); window.scrollTo({top:document.getElementById('treemap').offsetTop-40, behavior:'smooth'}); }
+
+function crumbs(){
+  const c = document.getElementById('crumbs');
+  c.innerHTML = selectedCard
+    ? `<a onclick="selectedCard=null;draw()">ULT.OFR district (all coordinates)</a> ▸ <b>${esc(selectedCard)}</b>`
+    : `<b>ULT.OFR district</b> ▸ <i>all three coordinates</i>`;
+}
+
+function legend(){
+  const lg = document.getElementById('legend');
+  if(!selectedCard){ lg.innerHTML='Tile area = total recorded evidence text per coordinate (claims, hits, misses, sources, surfaces, aliases, open fields).'; return; }
+  lg.innerHTML = Object.entries(DATA.categories).map(([k,m])=>`<span class="sw" style="background:${m.color}"></span>${m.label}`).join('');
+}
+
+function chipRow(label, ids){ return `<section><h3>${label}</h3>${ids.map(i=>`<span class="chip">${esc(i)}</span>`).join('')}</section>`; }
+
+function detail(){
+  const d = document.getElementById('detail');
+  if(!selectedCard){ d.style.display='none'; return; }
+  const c = DATA.cards.find(x=>x.id===selectedCard);
+  const sec = (k) => {
+    const m=DATA.categories[k], items=c.items[k];
+    return `<section id="cat-${k}"><h3 style="color:${m.color}">${m.label} · ${items.length}</h3><ul>${items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></section>`;
+  };
+  d.style.display='block';
+  d.innerHTML = `
+    <div class="head"><span class="grade">Evidence grade: ${esc(c.grade)}</span>
+      <b>${esc(c.id)} · ${esc(c.landmark)}</b><br><small>${esc(c.sentence)}</small></div>
+    <section><h3>Where it stands</h3>
+      <span class="chip accent">${esc(c.status)}</span>
+      <span class="chip">as_of ${esc(c.as_of)}</span>
+      <span class="chip">${Object.values(c.counts).reduce((a,b)=>a+b,0)} recorded facts</span></section>
+    ${Object.keys(DATA.categories).map(sec).join('')}
+    <section><h3>Moves together with</h3>${c.connected_to.map(cn=>{
+      const label = cn.relation ? esc(cn.target)+' — '+esc(cn.relation) : esc(cn.target);
+      const isCoord = /^ULT\.OFR-\d+$/.test(cn.target);
+      return `<span class="chip">${isCoord
+        ? `<a href="#" onclick="select('${esc(cn.target)}');return false;" style="color:inherit;text-decoration:none">${label}</a>`
+        : label}</span><br style="display:none">`;
+    }).join(' ')}</section>
+    <section><h3>Source files</h3><p style="font-size:13px;color:var(--muted)">Canonical card file: <code>package/reference/cards/${esc(c.id)}.md</code> · machine ledger: <code>explorer/ulteemate-three-card-evidence.json</code></p></section>`;
+}
+
+function jumpCat(k){ const t=document.getElementById('cat-'+k); if(t){t.scrollIntoView({behavior:'smooth',block:'center'}); t.classList.remove('flash'); void t.offsetWidth; t.classList.add('flash');} }
+
+draw();
+</script>
+</body>
+</html>
