@@ -34,7 +34,7 @@ block and it opens up into every single fact inside it. That's the **heads-up di
 | `package/reference/registry/registry.yaml` | The address book (a computer can read it too) |
 | `package/examples.md` | Four true stories of people using it — including one where we said "no" |
 | `package/MAPPING-GUIDE.md` | Six steps to use this on **your own** workspace |
-| `package/engine/verify_map.py` | A robot checker: makes sure the map's promises are still true |
+| `package/engine/verify_map.py` | A robot checker: keeps the map's promises true — and works as a fact-checker standing next to any AI |
 | `package/engine/run_walk.py` | A tester: asks any AI (or person) questions and saves their answers |
 | `explorer/app.py` | A bigger dashboard you can run on your own computer |
 | `docs/` | The live webpage |
@@ -60,6 +60,31 @@ and without.
   out the addresses. We keep that failure on display — see the receipts.
 
 Full results live in `docs/receipts.md`.
+
+## The bigger idea: give any AI a fact-checker
+
+Here's something we noticed along the way: almost everything people ask an AI has two
+parts. A big fuzzy part ("write this", "explain that", "summarize this folder") and a
+small exact part hiding inside — the date must be right, the total must add up, the
+product name must be one we actually sell, the rule must be followed exactly.
+
+Big paid AI models are good at both parts. Tiny free models that run on your own
+computer are great at the fuzzy part but drop the exact parts. That's where the Engine
+comes in: it doesn't talk at all. It just checks things the same way, every single time,
+offline, for free.
+
+Put them together and the little model does the thinking-and-talking while the Engine
+does the remembering-and-checking — and suddenly a tiny free model stops making the
+mistakes tiny models make.
+
+We tested this head-to-head: our little 4-billion-parameter model working *with* the
+Engine turned in better answers than Sol 5.6 working alone. Same questions, same stuff
+to read — the difference was that one of them had a checker standing next to it.
+
+The Cartographer is just one job for this pattern. Any task with "must be exactly right"
+hiding inside works the same way: totals on an invoice, doses on a label, dates in a
+plan, names in a store. Pair any model with the Engine and grade the answers. That's
+the whole recipe.
 
 ## Use it on your own workspace
 
